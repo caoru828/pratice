@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+        }
+
+        #container {
+
+            height: 100%;
+            width: 100%;
+            background-image: url("img/bg.jpg");
+            position: relative;
+        }
+
+        .smallImg {
+            width: 125px;
+            height: 125px;
+            position: absolute;
+            top: -200px;
+            left: -200px;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+            transition: all 1s ease;
+            border: 5px solid white;
+
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<script>
+    var oContainer = document.getElementById("container");
+    var counter = 0;
+    var aImg;
+    for (var i = 0; i < 24; i++) {
+        var oSmImg = new Image();
+        oSmImg.onload = function () {
+            counter++;
+            if (counter == 48) {
+                console.log("图片加载成功！")
+            }
+        };
+
+        oSmImg.src = "img/thumbs/" + (i + 1) + ".jpg";
+    }
+    for (i = 0; i < 24; i++) {
+        var oBiImg = new Image();
+        oBiImg.onload = function () {
+            counter++;
+            if (counter == 48) {
+                console.log("大图加载成功！")
+            }
+        };
+        oBiImg.src = "img/" + (i + 1) + ".jpg";
+    }
+    //直接定义在外边和在 oBiImg.onload = function()图片加载成功里边区别？？
+    var nowIndex = 0;
+    for (i = 0; i < 4; i++) {
+        for (var j = 0; j < 6; j++) {
+            nowIndex++;
+            var oDiv = document.createElement("div");
+            oDiv.style.backgroundImage = "url(img/thumbs/" + nowIndex + ".jpg)";
+            oDiv.className = "smallImg";
+            oDiv.innerHTML = "<span></span>";
+            oDiv.pos = {
+                line: i,
+                height: j
+            };
+            oContainer.appendChild(oDiv);
+
+        }
+    }
+    aImg = oContainer.getElementsByClassName("smallImg");
+//    console.log(aImg);
+    var oImgWidth = aImg[0].offsetWidth-10;
+    var oImgHeight = aImg[0].offsetHeight-10;
+    var oLeftGap = (oContainer.offsetWidth - oImgWidth * 6) / 7;
+    var oTopGap = (oContainer.offsetHeight - oImgHeight * 4) / 5;
+    for (i = 0; i < 24; i++) {
+        aImg[i].index = i;
+        aImg[i].style.transitionDelay = 100 * (24 - i) + "ms";
+        aImg[i].style.left = (oLeftGap + oImgWidth) * aImg[i].pos.height + oLeftGap + "px";
+        aImg[i].style.top = (oTopGap + oImgHeight) * aImg[i].pos.line + oTopGap + "px";
+        aImg[i].style.transform = "rotate(" + ( Math.random() * 40 - 20) + "deg)"
+    }
+    var oLLLGap = (oContainer.offsetWidth - oImgWidth * 6) / 2;
+    var oTTTGap = (oContainer.offsetHeight - oImgHeight * 4) / 2;
+//    var  oBigImgL =
+    var flag = true;
+    oContainer.onclick = function (e) {
+        if (e.target === this) {
+//            console.log(e);
+            return false;
+        }
+        if(flag){
+//            for (i = 0; i < 24; i++) {
+//                aImg[i].index = i;
+//
+//            }
+            for (i = 0; i < 24; i++) {
+
+
+                aImg[i].style.left = oImgWidth * aImg[i].pos.height + oLLLGap + "px";
+                aImg[i].style.top = oImgHeight * aImg[i].pos.line   +oTTTGap +"px";
+                aImg[i].style.transform =" rotate(0deg)";
+                aImg[i].style.border = "1px";
+                aImg[i].style.boxShadow ="0 0 0 0";
+                aImg[i].style.transitionDelay = "0ms";
+
+//                aImg[i].style.opacity = 0;
+                var  oSpan = aImg[i].getElementsByTagName("span")[0];
+                oSpan.style.opacity = 1;
+                var IIndex;
+                if(e.target.className =="smallImg" ){//div
+                    IIndex  = e.target.index;
+                    console.log(IIndex);
+                }else{//span
+//                    console.log(IIndex+"da");
+                    IIndex = e.target.parentNode.index;
+                }
+                oSpan.style.backgroundImage = "url(img/"+ (IIndex+1) +".jpg)";
+                oSpan.style.backgroundPosition =  -oImgWidth * aImg[i].pos.height + "px " + (-oImgHeight * aImg[i].pos.line )+ "px";
+                oSpan.style.display = "block";
+                oSpan.style.border = "1px solid white";
+//                console.log( oSpan.style.backgroundPosition);
+                oSpan.style.width = "125px";
+                oSpan.style.height = "125px";
+            }
+
+        }else{
+            for (i = 0; i < 24; i++) {
+
+                aImg[i].index = i;
+//                aImg[i].style.transitionDelay = 100 * (24 - i) + "ms";
+                aImg[i].style.left = (oLeftGap + oImgWidth) * aImg[i].pos.height + oLeftGap + "px";
+                aImg[i].style.top = (oTopGap + oImgHeight) * aImg[i].pos.line + oTopGap + "px";
+                aImg[i].style.transform = "rotate(" + ( Math.random() * 40 - 20) + "deg)";
+                aImg[i].style.border = "5px solid white";
+                aImg[i].style.boxShadow ="2px 2px 2px 2px rgba(0, 0, 0, 0.5) ";
+                var  oSpan = aImg[i].getElementsByTagName("span")[0];
+                oSpan.style.opacity = 0;
+
+            }
+
+
+
+        }
+        flag = !flag;
+    };
+
+
+</script>
+</body>
+</html>
