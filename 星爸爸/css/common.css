@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+img{
+    border: 0;
+}
+a{
+    text-decoration: none;
+}
+/*body{*/
+    /*font-family:AvenirLight, 'HelveticaNeue-Light',*/
+    /*'Helvetica Neue', arial, "Hiragino Sans GB",*/
+    /*"冬青黑体", "Microsoft YaHei New", "Microsoft Yahei",*/
+    /*"微软雅黑", 宋体, SimSun, STXihei, "华文细黑", sans-serif*/
+/*}*/
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+body,html{
+    width: 100%;
+    height: 100px;
+
+}
