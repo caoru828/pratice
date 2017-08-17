@@ -437,6 +437,386 @@ header {
 /*say-by-start结束*/
 
 
+/*watch-APP开始*/
+/*big-watch开始*/
+#big-watch-APP{
+    display: none;
+    background: url("../img/appWatch/mobile-bg.png") repeat-x;
+    height: 630px;
+    width: 100%;
+}
+#big-watch-pic{
+    margin: 0 auto;
+    width: 414px;
+}
+#big-watch-pic img{
+    width: 414px;
+}
+#big-watch-direction{
+    text-align:center;
+    margin-bottom: 14px;
+}
+#big-watch-direction p{
+    color:#3d3d3d ;
+    padding: 0 30px;
+}
+#big-watch-APP a{
+    font-size: 14px;
+    color: #b89f7a;
+    margin: 7px 0;
+    display: block;
+    text-align: right;
+}
+#big-watch-icon img{
+    margin: 0 auto;
+    display: block;
+}
+/*big-watch结束*/
+.watch-APP{
+    background: url("../img/web-bg.png") repeat-x;
+    width: 100%;
+    height: 220px;
+    display: flex;
+    /*text-align: center;*/
+}
+
+.watch-left,.watch-right,#app-codepicture{
+    /*float: left;*/
+display: inline-block;
+
+}
+.watch-left{
+    /*flex-grow: 3;*/
+    width: 0;
+    padding-left: 408px;
+    height: 220px;
+    background-size: contain;
+    background: url("../img/web-iwatch-cn.png") no-repeat;
+}
+.watch-left img{
+    float: right;
+}
+.watch-right{
+    flex-grow: 3;
+    width: 0;
+}
+.watch-right{
+    text-align: left;
+    padding: 35px 68px 0 68px;
+    font-size: 18px;
+    color: #3d3d3d;
+}
+
+#app-codepicture{
+    /*width: 130px;*/
+    flex-grow: 2;
+    width: 0;
+    height: 160px;
+    position: relative;
+    padding-top: 35px;
+    padding-left: 20px;
+}
+#app-codepicture img{
+    width: 130px;
+}
+#app-codepicture span{
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 130px;
+    height: 28px;
+    text-align: center;
+    color: #3d3d3d;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.watch-right a{
+    font-size: 14px;
+    color: #b89f7a;
+    margin: 7px 0;
+}
+
+
+/*watch-APP结束*/
+
+
+/*collect开始*/
+.collect{
+    width: 100%;
+    height: 486px;
+    background: #f5f5f5;
+    padding: 80px 0;
+    text-align: center;
+}
+.collect a{
+
+    background-color:transparent;
+    border: 1px #e8e8e8 solid;
+    display: inline-block;
+    width: 240px;
+    height: 280px;
+    margin: 10px;
+}
+.collect a div:hover{
+    box-shadow: 0 2px 4px #ccc;
+
+    color: #967a50;
+    background-color: whitesmoke;
+}
+.collect a:hover p{
+    color: #967a50;
+}
+.p-title{
+    font-size: 28px;
+    display: block;
+    color: #3d3d3d;
+    margin: 20px 0;
+}
+.p-direction{
+    font-size: 18px;
+    color: #8B8B8B ;
+    margin-bottom: 80px;
+
+}
+.collect-img{
+    width: 240px;
+    height: 280px;
+
+}
+.collect-img img{
+    width: 240px;
+    height: 160px;
+}
+.divP-first{
+    margin-top: 15px;
+    color: #2F2F2F;
+    font-size: 18px;
+    font-weight: bold;
+    height: 32px;
+}
+.divP-direction{
+    font-size: 14px;
+    color: #707175;
+    height: 28px;
+    text-decoration: none;
+}
+/*collect结束*/
+/*coffee开始*/
+.my-table  .wrapper{
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+}
+.my-table{
+    width: 100%;
+    height: 528px;
+    padding: 40px 0 ;
+    background: #060608;
+    /*text-align: center;*/
+}
+.coffee-pack{
+    width: 50%;
+    float: left;
+    display: inline-block;
+}
+.coffee-direction{
+    /*height: 100%;*/
+    width: 480px;
+    float: left;
+    text-align: center;
+    margin-top: 148px;
+    display: inline-block;
+}
+.my-table  .coffee-direction h3{
+    font-weight: 900;
+    margin: 28px 0  13px 0;
+    font-size: 13px;
+    color: #a98e67;
+    letter-spacing: 3px;
+}
+.coffee-direction h3,.coffee-direction p,.coffee-direction button{
+    display: inline-block;
+}
+.coffee-direction p{
+    font-size: 18px;
+    line-height: 28px;
+    color: #707070;
+    font-weight: 400;
+}
+
+.coffee-direction button {
+    width: 110px;
+    height: 50px;
+    font-size: 14px;
+    color: #a98e67;
+    border: 2px solid #a98e67;
+    background: #0f0f0f;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 7px 14px 7px 0;
+    font-family: AvenirLight, 'HelveticaNeue-Light',
+    'Helvetica Neue', arial, "Hiragino Sans GB",
+    "冬青黑体", "Microsoft YaHei New", "Microsoft Yahei",
+    "微软雅黑", 宋体, SimSun, STXihei, "华文细黑", sans-serif
+}
+
+.coffee-direction button:hover {
+    background: #a98e67;
+    color: white;
+}
+/*coffee结束*/
+
+/*footer开始*/
+.footer{
+    height: 746px;
+    background: #292929;
+    width: 100%;
+    padding: 60px 0 20px 0;
+}
+.footer .wrapper{
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+.footer a{
+    display: block;
+    width: 285px;
+    height: 27px;
+    margin-bottom: 7px;
+    font-size: 15px;
+    color: #A3A3A3;
+
+
+
+}
+.footer .hidden-mask  a:hover{
+    text-decoration: underline;
+}
+.footer .foot-title>a{
+    font-size: 18px;
+    display: block;
+    width: 285px;
+    height: 27px;
+    margin-bottom: 7px;
+    color: white;
+    text-decoration: none;
+}
+.foot-title {
+
+    float: left;
+    width: 285px;
+    height: 275px;
+}
+#qr-code{
+    width: 100px;
+}
+.foot-title:last-of-type{
+    width: 100px;
+}
+.foot-title:last-of-type span{
+   font-size: 12px;
+   color:#a3a09e;
+    display: block;
+    width: 100px;
+    text-align: center;
+    margin: 5px 0;
+}
+#footer-left  a{
+    /*width: 250px;*/
+    font-size: 13px;
+    height: 23px;
+    line-height: 23px;
+
+}
+#footer-left  a:hover{
+    text-decoration: underline;
+}
+#footer-left{
+    height: 90px;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+}
+#footer-right{
+    position: absolute;
+    right: 100px;
+    bottom: 30px;
+}
+#footer-right img{
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+}
+
+
+#police-icon{
+    width: 10px;
+}
+
+/*footer结束*/
+/*collect开始*/
+@media (max-width:1100px ){
+    .collect{
+        height: 796px;
+    }
+}
+/*collect结束*/
+
+
+/*my-table开始*/
+@media (max-width:990px ){
+
+    .my-table{
+        width: 100%;
+        height: 528px;
+        text-align: center;
+    }
+    .coffee-direction{
+           width: 240px;
+       }
+    .coffee-pack{
+        width: 480px;
+        height: 528px;
+        display: inline-block;
+    }
+    .coffee-direction{
+        width: 240px;
+        height: 528px;
+        margin-top: 62px;display: inline-block;
+    }
+}
+/*my-table结束*/
+@media (max-width:1000px ) {
+    .watch-APP{
+        display: none;
+    }
+    #big-watch-APP{
+        display: block;
+
+    }
+
+}
+
+@media (max-width:820px ){
+    .my-table{
+        height: 914px;
+        /*padding: 0 40px;*/
+    }
+    .coffee-pack{
+        width: 100%;
+    }
+    .coffee-direction{
+        width: 100%;
+    }
+}
+/*@media (max-width:820px ){*/
+    /*.collect  .p-direction a div{*/
+        /*width: 136px;*/
+        /*height: 220px;*/
+    /*}*/
+/*}*/
 @media (max-width: 770px) {
     .login span a, .login span {
         font-size: 12px;
@@ -528,7 +908,12 @@ header {
         width: 120px;
         padding-left: 10px;
     }
-
+    #say-letter{
+        padding-top: 44px;
+    }
+    #say-working{
+        padding-top: 22px;
+    }
     .say-top,.say-bottom{
          height: 50%;
          width: 300px;
@@ -607,3 +992,20 @@ header {
     }
 
 }
+/*max-width开始*/
+@media (max-width: 370px) {
+   .say-by-start{
+       height: 569px;
+       width: 100%;
+   }
+   #say-line img{
+       clear: both;
+       /*margin:  0 auto;*/
+   }
+   .say-top,.say-bottom{
+       margin: 0 auto;
+       width: 150px;
+   }
+
+}
+/*max-width开始结束*/
