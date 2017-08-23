@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            font: 12px/19px Arial, Helvetica, sans-serif;
+            color: #666;
+        }
+
+        form div {
+            margin: 5px 0;
+        }
+
+        .int label {
+            float: left;
+            width: 100px;
+            text-align: right;
+        }
+
+        .int input {
+            padding: 1px 1px;
+            border: 1px solid #ccc;
+            height: 16px;
+        }
+
+        .sub {
+            padding-left: 100px;
+        }
+
+        .sub input {
+            margin-right: 10px;
+        }
+
+        .formtips {
+            width: 200px;
+            margin: 2px;
+            padding: 2px;
+        }
+
+        .onError {
+            background: #FFE0E9 url(img/reg3.gif) no-repeat 0 center;
+            padding-left: 25px;
+        }
+
+        .onSuccess {
+            background: #E9FBEB url(img/reg4.gif) no-repeat 0 center;
+            padding-left: 25px;
+        }
+
+        .high {
+            color: red;
+            margin-left: 3px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--/*-->
+<!--表单验证练习，功能：-->
+<!--1.文本框旁边自动加星号标识：在所有class属性为required的文本框旁边自动加入红色星号标识-->
+<!--2.文本框失去焦点验证：验证要求：-->
+<!--2.1用户名：不能为空且至少6位，如果验证失败，在用户名文本框右边显示警告，警告信息的样式为formtips onError，如果验证成功，显示正确提示，样式为：formtips onSuccess-->
+<!--2.2邮箱：不能为空且要求格式符合常见邮箱格式要求，验证成功或失败与用户名要求一致-->
+<!--3.提交验证：验证要求与文本框失去焦点验证一致，如果验证失败禁止提交，否则提示信息：注册成功,密码已发到你的邮箱,请查收.-->
+<!--4.重置：清除所有信息，恢复默认初始状态-->
+<!--5.*****特别要求*****：当文本框获得焦点以及键盘弹起时也要进行与失去焦点一样的验证-->
+<!--*/-->
+<!--//文档就绪函数-->
+<!--//        $(function(){-->
+<!--//思路：-->
+<!--//1.文本框旁边自动加星号标识：选中所有class属性值为required的文本框，由于选中的元素可能是多个，所有需要循环操作，在其旁边加上星号标识；-->
+<!--//                   要求：星号标识使用strong标签包围，class为high，至少使用三种方式完成功能-->
+<!--//2.文本框失去焦点验证：给所有class属性为required的文本框注册失去焦点事件，在事件中对当前文本框的输入值进行合法性验证，如果验证失败在旁边-->
+<!--//                   显示警告信息，如果验证成功，显示正确提示-->
+<!--//3.提交验证：提交验证是由提交按钮触发的单击事件，在该事件中也需要对表单进行验证，并且验证的要求与前面的失去焦点验证一样，难道我们在此需要将上面的代码copy一遍？-->
+<!--//           这是万万不能的，所以我们可以考虑这样一种情况：如果我们单击了提交按钮，但是同时也触发了文本框的失去焦点事件，你猜结果会发生什么事情？-->
+<!--//			 同样的，当文本框获得焦点以及键盘弹起时也做同样的事情-->
+
+<!--//        });-->
+
+<form method="post" action="">
+    <div class="int">
+        <label for="username">用户名:</label>
+        <input type="text" id="username" class="required"/>
+    </div>
+    <div class="int">
+        <label for="email">邮箱:</label>
+        <input type="text" id="email" class="required"/>
+    </div>
+    <div class="int">
+        <label for="personinfo">个人资料:</label>
+        <input type="text" id="personinfo"/>
+    </div>
+    <div class="sub">
+        <input type="submit" value="提交" id="send"/><input type="reset" id="res"/>
+    </div>
+</form>
+<script src="../js/jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        var $username = $("#username");
+        var $email = $("#email");
+        var $star = $("<span class='high'>*</span>");
+        $star.insertAfter($username);
+        var $star2 = $("<span class='high'>*</span>");
+        $star2.insertAfter($email);
+
+
+        $username.focus(function () {
+            var $wrong = $("<span class='onError'> 请输入至少6位的用户名 </span>");
+            var $right = $("<span class='onSuccess'> 输入正确 </span>");
+//          没keyup时，刚获取焦点就提示
+            if (this.value == "") {
+                if ($star.next().length == 0) {
+                    $wrong.insertAfter($star);
+                }
+            }
+            $(this).keyup(function () {
+                console.log(this.value);
+
+//                    往*后边增加提示框，保证有兄弟就不要重复添加提示框了
+//                    删除字符的时候，小于6的时候，this.value.length<6，保证显示错误提示框回来，每次监听input里的字符
+                if ($star.next().length == 0 || this.value.length < 6) {
+//                 console.log($star.next());
+                    console.log("<60");
+                    $star.next().remove();
+                    $wrong.insertAfter($star);
+
+                } else {
+                    $star.next().remove();
+                    $right.insertAfter($star);
+                    console.log(">6");
+                }
+            });
+        });
+        $email.focus(function () {
+            var $wrong1 = $("<span class='onError'> 请输入正确的邮箱号 </span>");
+            var $right1 = $("<span class='onSuccess'> 输入正确 </span>");
+            if (this.value == "") {
+                if ($star2.next().length == 0) {
+                    $wrong1.insertAfter($star2);
+                }
+            }
+            $(this).keyup(function () {
+                console.log(this.value);
+
+//                    往*后边增加提示框，保证有兄弟就不要重复添加提示框了
+//                    删除字符的时候，小于6的时候，this.value.length<6，保证显示错误提示框回来，每次监听input里的字符
+                if ($star2.next().length == 0 || !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value)) {
+//                 console.log($star.next());
+                    console.log("<60");
+                    $star2.next().remove();
+                    $wrong1.insertAfter($star2);
+
+                } else {
+                    $star2.next().remove();
+                    $right1.insertAfter($star2);
+                    console.log(">6");
+                }
+            });
+        });
+
+        $("#send").on("click",function(){
+
+            console.log($star.next().attr("class"));
+            if($star.next().attr("class")=="onSuccess"&&$star2.next().attr("class")=="onSuccess"){
+                alert("注册成功,密码已发到你的邮箱,请查收");
+            }else{
+                alert("验证失败禁止提交");
+            }
+            $username.trigger("blur");
+            $email.trigger("blur");
+        });
+        $("#res").on("click",function(){
+            $username.empty();
+            $star.next().remove();
+            $email.empty();
+            $star2.next().remove();
+        })
+
+    })
+</script>
+</body>
+</html>
