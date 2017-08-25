@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<table>
+    <thead>
+    <tr><th> </th><th>姓名</th><th>性别</th><th>暂住地</th></tr>
+    </thead>
+    <tbody>
+    <tr><td><input type="checkbox" name="choice" value=""/></td>
+        <td>张山</td><td>男</td><td>浙江宁波</td></tr>
+    <tr><td><input type="checkbox" name="choice" value="" /></td>
+        <td>李四</td><td>女</td><td>浙江杭州</td></tr>
+    <tr><td><input type="checkbox" name="choice" value="" ></td>
+        <td>王五</td><td>男</td><td>湖南长沙</td></tr>
+    <tr><td><input type="checkbox" name="choice" value="" /></td>
+        <td>找六</td><td>男</td><td>浙江温州</td></tr>
+    <tr><td><input type="checkbox" name="choice" value="" /></td>
+        <td>Rain</td><td>男</td><td>浙江杭州</td></tr>
+
+    <tr><td><input type="checkbox" name="choice" value="" /></td>
+        <td>MAXMAN</td><td>女</td><td>浙江杭州</td></tr>
+    </tbody>
+</table>
+<!--   ÒýÈëjQuery -->
+<script src="../js/jquery-1.12.4.js" type="text/javascript"></script>
+<script>
+    $(function(){
+        $("tbody > tr").on("click",function(){
+            if($(this).hasClass("selected")){
+                $(this).find("input").removeProp("checked");
+                $(this).removeClass("selected");
+            }else{
+                $(this).addClass("selected");
+                $(this).find("input").prop("checked",true);
+            }
+        })
+    })
+</script>
+
+    <!--$(function(){-->
+        <!--$('tbody > tr').on('click',function(){-->
+            <!--if($(this).hasClass('selected')){-->
+                <!--$(this).removeClass('selected').find('input').prop('checked',false);-->
+            <!--}else{-->
+                <!--$(this).addClass('selected').find('input').prop('checked',true);-->
+            <!--}-->
+        <!--});-->
+    <!--})-->
+
+
+</body>
+</html>
