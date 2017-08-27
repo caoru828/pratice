@@ -135,6 +135,8 @@
                     console.log(">6");
                 }
             });
+        }).on("blur",function(){
+            $(this).triggerHandler("keyup")
         });
         $email.focus(function () {
             var $wrong1 = $("<span class='onError'> 请输入正确的邮箱号 </span>");
@@ -160,21 +162,24 @@
                     $right1.insertAfter($star2);
                     console.log(">6");
                 }
-            });
+
+            })
+        }).on("blur",function(){
+            $(this).triggerHandler("keyup")
         });
 
-        $("#send").on("click",function(){
+        $("#send").on("click", function () {
 
             console.log($star.next().attr("class"));
-            if($star.next().attr("class")=="onSuccess"&&$star2.next().attr("class")=="onSuccess"){
+            if ($star.next().attr("class") == "onSuccess" && $star2.next().attr("class") == "onSuccess") {
                 alert("注册成功,密码已发到你的邮箱,请查收");
-            }else{
+            } else {
                 alert("验证失败禁止提交");
             }
             $username.trigger("blur");
             $email.trigger("blur");
         });
-        $("#res").on("click",function(){
+        $("#res").on("click", function () {
             $username.empty();
             $star.next().remove();
             $email.empty();
