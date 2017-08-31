@@ -1,0 +1,163 @@
+
+#arrowTop{
+    /*background:black ;*/
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
+.head{
+    background: url("../img/bg2.jpg")  0 0/contain  no-repeat ;
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+#particles-js {
+   position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 666;
+}
+#header-nav{
+    z-index: 777;
+    width: 100%;
+    height: 79px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.About-me{
+    font-size: 18px;
+    height: 79px;
+    text-align: center;
+}
+.About-me li{
+    padding: 0 15px;
+    float: right;
+    line-height: 79px;
+    height: 79px;
+    z-index: 10;
+    text-align: center;
+}
+.About-me li:hover{
+    background: #312753;
+    opacity: 0.7;
+
+
+}
+.About-me li a{
+    display: block;
+    font-weight: bolder;
+    color: #babac0;
+    width: 76px;
+    height: 79px;
+    line-height: 79px;
+}
+#header-content{
+    /*width: 100%;*/
+    /*height: 679px;*/
+    padding-top: 80px;
+    margin-top: 300px;
+    height: 57px;
+    z-index: 668;
+    text-align: center;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#header-content .My-name{
+    overflow: hidden;
+    height: 60px;
+    width: 0;
+    color: #fff;
+   font-size: 56px;
+    font-weight: 500;
+
+    border-right: 3px solid white;
+}
+/*#header-nav .About-me{*/
+    /*display: none;*/
+/*}*/
+#address{
+    overflow: hidden;
+    height: 60px;
+    width: 0;
+    color: #fff;
+    font-size: 56px;
+    font-weight: 500;
+    border-right: 3px solid white;
+    display: none;
+}
+#header-nav-Sicon{
+    display: none;
+    float: right;
+    height: 80px;
+    width: 60px;
+    text-align: center;
+}
+#wrapper-span{
+
+    margin-top: 32px;
+    width: 22px;
+    height: 16px;
+}
+#wrapper-span span{
+    display: block;
+    width: 22px;
+    height: 2px;
+}
+#wrapper-span .block{
+    background: white;
+}
+#wrapper-span .none{
+    height: 5px;
+    background: transparent;
+}
+
+
+#slide-Menu.toggle{
+    height: 359px;
+    float: none;
+    z-index: 888;
+    display: none;
+    width: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+
+
+#slide-Menu > li{
+    width: 200px;
+    background: #292929;
+}
+#slide-Menu a{
+    margin-left: 62px;
+}
+
+
+@media (max-width: 950px) {
+    #header-nav>ul{
+        display: none;
+    }
+    #header-nav-Sicon{
+        display: block;
+    }
+    #slide-Menu{
+        display: block;
+    }
+}
