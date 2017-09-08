@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        li{
+            list-style: none;
+        }
+        #container{
+            margin: 100px auto;
+            width: 200px;
+        }
+        .first-menu{
+            width: 200px;
+            border: 1px solid black;
+        }
+        h3{
+            width: 200px;
+            background: #000;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+        .submenu{
+            width: 200px;
+            text-align: center;
+
+        }
+        .submenu li:hover{
+            background: #ccccff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<ul id="container">
+    <li class="first-menu">
+        <h3>管理区</h3>
+        <ul class="submenu">
+            <li>001</li>
+            <li>002</li>
+            <li>003</li>
+        </ul>
+    </li>
+    <li class="first-menu">
+        <h3>交流区</h3>
+        <!-- 如果写在head里，得点两下才能起作用，.style.display改变的是内联样式的值-->
+        <ul  class="submenu">
+            <li>001</li>
+            <li>002</li>
+            <li>003</li>
+        </ul>
+    </li>
+</ul>
+<script>
+    var oContainer = document.getElementById("container");
+    var oH3        = oContainer.getElementsByTagName("h3");
+    var oSubmenue  = oContainer.getElementsByTagName("ul");
+    for(var i=0;i<oH3.length;i++){
+        oH3[i].index=i;
+        oSubmenue[i].flag = false;
+        oH3[i].onclick = function(){
+            if(oSubmenue[this.index].flag==false){
+                oSubmenue[this.index].style.display = "none";
+            }else{
+                oSubmenue[this.index].style.display = "block";
+            }
+            oSubmenue[this.index].flag = !oSubmenue[this.index].flag;
+        }
+    }
+
+</script>
+</body>
+</html>
