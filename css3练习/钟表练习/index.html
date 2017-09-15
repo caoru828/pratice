@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+            width: 2px;
+            height: 6px;
+            background: #fff;
+            position: absolute;
+            top: 0;
+            left: 100px;
+            transform-origin: 0 100px;
+        }
+        /*#ul li:first-child{*/
+            /*transform: rotate(0deg);*/
+        /*}*/
+        /*#ul li:nth-child(2){*/
+            /*transform: rotate(6deg);*/
+        /*}*/
+        /*#ul li:nth-child(3){*/
+            /*transform: rotate(12deg);*/
+        /*}*/
+        /*#ul li:nth-child(4){*/
+            /*transform: rotate(18deg);*/
+        /*}*/
+        /*#ul li:nth-child(5){*/
+            /*transform: rotate(24deg);*/
+        /*}*/
+        /*#ul li:nth-child(6){*/
+            /*transform: rotate(30deg);*/
+        /*}*/
+        #ul li:nth-child(5n+1){
+            height: 10px;
+        }
+        /*#ul li:nth-child(46){*/
+            /*height: 10px;*/
+            /*opacity: .3;*/
+        /*}*/
+        #container{
+            border: 2px solid gray;
+            box-shadow: 3px 3px 3px grey;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            border-radius: 50%;
+            background:0 0/cover url(pm0448-5573ht.jpg);
+
+        }
+        #hour{
+            width: 4px;
+            height: 40px;
+            background: #000;
+            position: absolute;
+            top: 60px;
+            left: 99px;
+        }
+        #minute{
+            width: 4px;
+            height: 60px;
+            background: #CCCCCC;
+            position: absolute;
+            left: 99px;
+            top: 40px;
+        }
+        #second{
+            width: 2px;
+            height: 70px;
+            background: red;
+            position: absolute;
+            left: 100px;
+            top: 30px;
+        }
+        #container div{
+            transform-origin: bottom;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul id="ul">
+
+    </ul>
+    <div id="hour"></div>
+    <div id="minute"></div>
+    <div id="second"></div>
+</div>
+<script>
+    var oContainer = document.getElementById("container");
+    var oul = document.getElementById("ul");
+    var oHour = document.getElementById("hour");
+    var oMinute = document.getElementById("minute");
+    var oSecond =document.getElementById("second");
+    var aLi="";
+    for(var i = 0;i<60;i++){
+        console.log(i);
+        aLi+="<li style='transform: rotate("+ i*6+ "deg)'></li>"
+    }
+    oul.innerHTML = aLi;
+
+
+    run();
+    function run(){
+            var date = new Date();
+            var second = date.getSeconds();
+            var minute = date.getMinutes() + second/60;
+            var hour = date.getHours() + minute/60;
+            oSecond.style.transform= "rotate("+ second*6 +"deg)";
+            oMinute.style.transform = "rotate("+ minute*6 +"deg)";
+            oHour.style.transform = "rotate("+ 30*hour +"deg)";
+    }
+   var timer = setInterval(function(){
+       run();
+   },1000)
+
+</script>
+</body>
+</html>
