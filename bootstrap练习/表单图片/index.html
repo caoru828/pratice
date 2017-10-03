@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
+    <title>表单图片</title>
+</head>
+<body>
+<div class="form-group">
+    <!-- form-group放在一组，加个margin-bottom-->
+    <form >
+        <!-- class="form-horizontal"????-->
+        <label>
+            <!-- form-control默认样式?????width100%???,运行出来也不是100%啊-->
+            电子邮件：<input type="email" class="form-control" placeholder="请输入您的邮件"/>
+        </label>
+
+        <label>
+            密码：<input type="password"  class="form-control"  placeholder="请输入您的密码"/>
+        </label>
+    </form>
+</div>
+
+<!--2.内联表单-->
+<form action="" class="form-inline">
+    <!--form-inline让所有表单里的元素占一行-->
+    <label>
+        <!--  class="col-sm-2"????-->
+        <!-- form-control?????width100%???,运行出来也不是100%啊-->
+        电子邮件：<input type="email" class="form-control" placeholder="请输入您的邮件"/>
+    </label>
+    <label>
+        密码：<input type="password"  class="form-control"  placeholder="请输入您的密码"/>
+    </label>
+</form>
+
+<!--3.表单组合-->
+<div class="input-group">
+    <!-- input-group让input和div放在一组里,防疫行里-->
+    <div class="input-group-addon">￥</div>
+    <!-- 加一个￥符号在输入框上-->
+    <input type="text" class="form-control"/>
+    <div class="input-group-addon">.00</div>
+</div>
+<br/>
+<br/>
+
+<!--一起做-->
+<!--1.form表单组合-->
+<form>
+    <div class="form-group">
+        <label>电子邮件：</label>
+        <!-- 这样label在外边是width是100%-->
+        <input type="email" class="form-control" placeholder="请输入您的邮件"/>
+    </div>
+    <div class="form-group">
+        <label>密码：</label>
+        <input type="password" class="form-control" placeholder="请输入您的密码"/>
+    </div>
+    <!-- 2.内联表单-->
+</form>
+<!--form-inline  内联表单  让所有表单元素居于一行，小于768px，width是100%-->
+<form class="form-inline">
+    <div class="form-group">
+        <label>电子邮件：</label>
+        <!-- 这样label在外边是width是100%-->
+        <input type="email" class="form-control" placeholder="请输入您的邮件"/>
+    </div>
+    <div class="form-group">
+        <label>密码：</label>
+        <input type="password" class="form-control" placeholder="请输入您的密码"/>
+    </div>
+
+</form>
+
+<!--3.表单合组-->
+<form>
+    <div class="form-group">
+        <label>电子邮件：</label>
+        <!-- 这样label在外边是width是100%-->
+        <input type="email" class="form-control" placeholder="请输入您的邮件"/>
+    </div>
+    <div class="form-group">
+        <label>密码：</label>
+        <input type="password" class="form-control" placeholder="请输入您的密码"/>
+    </div>
+
+    <div class="input-group">
+        <!-- input-group合并组，把下边这俩放一块-->
+        <div class="input-group-addon">$</div>
+        <!-- input-group-addon$变一整行,灰色，左边圆角，-->
+        <input type="text" class="form-control" placeholder="请输入价格"/>
+    </div>
+</form>
+<br/>
+<br/>
+
+    <!-- 4.水平排列-->
+<!--让标签和文本框芳一行-->
+<form class="form-horizontal">
+    <div class="form-group">
+        <label>电子邮件：</label>
+        <!-- 这样label在外边是width是100%-->
+        <input type="email" class="form-control" placeholder="请输入您的邮件"/>
+    </div>
+    <div class="form-group">
+        <label>密码：</label>
+        <input type="password" class="form-control" placeholder="请输入您的密码"/>
+    </div>
+</form>
+
+
+<script src="../jquery-1.11.2.js"></script>
+<script src="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
+    <title>表格按钮</title>
+</head>
+<!--table-responsive小于798有边框-->
+<body class="table-responsive">
+<!--table标题加粗居左，默认100%--->
+   <table class="table  table-bordered table-hover">
+       <!--??????striped-->
+       <thead>
+           <tr class="success">
+               <td>thead</td>
+               <td>thead3</td>
+           </tr>
+       </thead>
+       <tbody>
+       <tr class="active">
+           <td>tbody2</td>
+           <td>tbody3</td>
+       </tr>
+       <tr class="info">
+           <td>tbody2</td>
+           <td>tbody3</td>
+       </tr>
+       <!-- sr-only隐藏行-->
+       <tr class="warning sr-only">
+           <td>tbody2</td>
+           <td>tbody3warning</td>
+       </tr>
+       
+       </tbody>
+   </table>
+
+<!--按钮-->
+<!--1分类 a input button-->
+<!--2.属性-->
+    <a href="#">Link</a>
+    <a href="#" class="btn">Link</a>
+    <a href="#" class="btn btn-default">Link</a>
+    <a href="#" class="btn btn-default btn-success">Link</a>
+    <a href="#" class="btn btn-default btn-info">Link</a>
+    <a href="#" class="btn btn-default btn-warning">Link</a>
+    <a href="#" class="btn btn-default btn-danger">Link</a>
+    <a href="#" class="btn btn-default btn-primary">Link</a>
+    <a href="#" class="btn btn-default btn-link">Link</a>
+<br/>
+                <input type="button" value="input">
+                <input type="button" class="btn" value="Link">
+                <input type="button" class="btn btn-default" value="Link">
+                <input type="button" class="btn btn-default btn-success" value="Link">
+                <input type="button" class="btn btn-default btn-info" value="Link">
+                <input type="button" class="btn btn-default btn-warning" value="Link">
+                <input type="button" class="btn btn-default btn-danger" value="Link">
+                <input type="button" class="btn btn-default btn-primary" value="Link">
+                <input type="button" class="btn btn-default btn-link" value="input">
+<br/>
+<button class="btn btn-default">button</button>
+<button class="btn btn-default btn-success">button</button>
+
+<!--3.型号-->
+<button class="btn btn-default btn-success btn-lg">button</button>
+<button class="btn btn-default btn-success btn-sm">button</button>
+<button class="btn btn-default btn-success btn-xs">button</button>
+
+<!--4.块级按钮-->
+
+<button class="btn btn-default btn-block">button</button>
+
+<!--5.激活状态 鼠标点击有阴影，-->
+<button class="btn btn-default btn-block active">button</button>
+
+<!--6.禁用-->
+<button class="btn btn-default btn-success btn-sm disabled">button</button>
+
+
+<script src="../jquery-1.11.2.js"></script>
+<script src="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
