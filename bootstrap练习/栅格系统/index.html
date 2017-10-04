@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- 移动设备优先-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css.map"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
+    <title>栅格系统</title>
+    <style>
+        .a {
+            height: 50px;
+            border: 1px solid #CCCCCC;
+            background-color: #eeeeee;
+        }
+    </style>
+</head>
+<body>
+<!--布局容器-->
+<!--1200,里边是1170，外边有15的距离,外围固定-->
+<div class="container a">
+    <div class="row">
+        <div class="col-md-1 a">1</div>
+        <div class="col-md-1 a">1</div>
+        <div class="col-md-1 a">1</div>
+        <div class="col-md-1 a">1</div>
+        <div class="col-md-1 a">1</div>
+        <div class="col-md-1 a">1</div>
+        <div class="col-md-1 a">1</div>
+        <div class="col-md-1 a">1</div>
+        <div class="col-md-1 a">1</div>
+        <div class="col-md-1 a">1</div>
+        <div class="col-md-1 a">1</div>
+        <div class="col-md-1 a">1</div>
+    </div>
+    <div class="row">
+        <div class="col-md-9 a">9</div>
+        <div class="col-md-3 a">3</div>
+    </div>
+
+
+
+    <div class="row">
+        <!-- col-lg-4  当屏幕大于1200px时，一个站4分，一行就分成3个。。col-md-3 col-sm-6 a col-xs-6-->
+        <div class="col-lg-4 col-md-3 col-sm-6 a col-xs-6">88</div>
+        <div class="col-lg-4 col-md-3 col-sm-6 a col-xs-6">88</div>
+        <div class="col-lg-4 col-md-3 col-sm-6 a col-xs-6">88</div>
+        <div class="col-lg-4 col-md-3 col-sm-6 a col-xs-6">88</div>
+        <div class="col-lg-4 col-md-3 col-sm-6 a col-xs-6">88</div>
+        <div class="col-lg-4 col-md-3 col-sm-6 a col-xs-6">88</div>
+        <div class="col-lg-4 col-md-3 col-sm-6 a col-xs-6">88</div>
+        <div class="col-lg-4 col-md-3 col-sm-6 a col-xs-6">88</div>
+        <div class="col-lg-4 col-md-3 col-sm-6 a col-xs-6">88</div>
+        <div class="col-lg-4 col-md-3 col-sm-6 a col-xs-6">88</div>
+        <div class="col-lg-4 col-md-3 col-sm-6 a col-xs-6">88</div>
+        <div class="col-lg-4 col-md-3 col-sm-6 a col-xs-6">88</div>
+    </div>
+</div>
+<!--外围100%流体宽度-->
+<!--<div class="container-fluid a">...</div>-->
+
+<!-- >=1200px,实际1170，大桌面显示器-->
+<div class="col-lg-12 a">lg</div>
+
+<!-- >=992px，桌面显示器-->
+<div class="col-md-12 a">md</div>
+
+<!-- >=738px，小屏，平板-->
+<div class="col-sm-12 a">sm</div>
+
+<!-- <768px，超小屏，手机-->
+<div class="col-xs-12 a">xs</div>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <!-- 列偏移，向右移一位，保证向右对齐-->
+        <div class="col-md-8 a">8</div>
+        <div class="col-md-3 col-md-offset-1 a">3</div>
+    </div>
+    <div class="row">
+        <!-- 嵌套-->
+        <div class="col-md-9 a" style="padding: 0">
+            <div class="col-md-4 a">4</div>
+            <div class="col-md-4 a">4</div>
+            <div class="col-md-4 a">4</div>
+        </div>
+        <div class="col-md-3 a">3</div>
+    </div>
+<!--交换位置，排序-->
+    <div class="row">
+        <!-- 右移push-->
+        <div class="col-md-9 a col-md-push-3">9</div>
+        <!-- 左移pull-->
+        <div class="col-md-3 a col-md-pull-9">3</div>
+    </div>
+</div>
+<script src="../jquery-1.11.2.js"></script>
+<script src="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
