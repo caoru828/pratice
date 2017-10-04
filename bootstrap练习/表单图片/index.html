@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css.map"/>
-    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
     <title>表单图片</title>
 </head>
 <body>
-<div class="form-group">
-    <!-- form-group放在一组，加个margin-bottom-->
-    <form >
-        <!-- class="form-horizontal"????-->
-        <label>
-            <!-- form-control默认样式?????width100%???,运行出来也不是100%啊-->
-            电子邮件：<input type="email" class="form-control" placeholder="请输入您的邮件"/>
-        </label>
 
-        <label>
-            密码：<input type="password"  class="form-control"  placeholder="请输入您的密码"/>
-        </label>
-    </form>
-</div>
+<!-- form-group放在一组，加个margin-bottom-->
+
+<form class="form-horizontal">
+    <!-- class="form-horizontal"????-->
+    <label class="col-sm-2"> 电子邮件a： </label>
+    <!-- form-control默认样式?????width100%???,运行出来也不是100%啊,,,label要放在外边单独的才是100%-->
+    <div class="col-sm-10">
+        <input type="email" class="form-control" placeholder="请输入您的邮件"/>
+    </div>
+
+
+    <label> 密码：</label>
+    <input type="password" class="form-control" placeholder="请输入您的密码"/>
+
+</form>
 
 <!--2.内联表单-->
 <form action="" class="form-inline">
@@ -34,7 +36,7 @@
         电子邮件：<input type="email" class="form-control" placeholder="请输入您的邮件"/>
     </label>
     <label>
-        密码：<input type="password"  class="form-control"  placeholder="请输入您的密码"/>
+        密码：<input type="password" class="form-control" placeholder="请输入您的密码"/>
     </label>
 </form>
 
@@ -44,6 +46,7 @@
     <div class="input-group-addon">￥</div>
     <!-- 加一个￥符号在输入框上-->
     <input type="text" class="form-control"/>
+
     <div class="input-group-addon">.00</div>
 </div>
 <br/>
@@ -96,25 +99,128 @@
         <input type="text" class="form-control" placeholder="请输入价格"/>
     </div>
 </form>
-<br/>
-<br/>
 
-    <!-- 4.水平排列-->
+<!-- 4.水平排列-->
 <!--让标签和文本框芳一行-->
+<!--?????width有问题-->
 <form class="form-horizontal">
+    <!-- class="form-horizontal"????-->
     <div class="form-group">
-        <label>电子邮件：</label>
+        <label class="col-sm-2 control-label"> 电子邮件a： </label>
+        <!-- form-control默认样式?????width100%???,运行出来也不是100%啊,,,label要放在外边单独的才是100%-->
+        <div class="col-sm-10">
+            <input type="email" class="form-control" placeholder="请输入您的邮件"/>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label"> 密码：</label>
+
+        <div class="col-sm-10">
+            <input type="password" class="form-control " placeholder="请输入您的密码"/>
+        </div>
+
+    </div>
+
+    <!--5.复选框和单选框-->
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"/>体育
+        </label>
+    </div>
+    <!-- disabled 外边的div和里边的input都得写-->
+    <div class="checkbox disabled">
+        <label>
+            <input type="checkbox" disabled/>音乐
+        </label>
+    </div>
+
+    <!--checkbox-inline  radio-inline  放一行-->
+    <label class="checkbox-inline">
+        <input type="checkbox"/>体育
+    </label>
+    <label class="checkbox-inline disabled">
+        <input type="checkbox" disabled/>音乐
+    </label>
+    <label class="radio-inline ">
+        <input type="radio"/>男
+    </label>
+    <!--6.下拉列表-->
+    <select class="form-control">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+    </select>
+
+
+</form>
+<form>
+    <!--7. 校验状态-->
+    <div class="form-group has-success">
+        <label class="control-label">电子邮件：</label>
         <!-- 这样label在外边是width是100%-->
         <input type="email" class="form-control" placeholder="请输入您的邮件"/>
     </div>
-    <div class="form-group">
-        <label>密码：</label>
-        <input type="password" class="form-control" placeholder="请输入您的密码"/>
+    <div class="form-group has-error">
+        <label class="control-label">电子邮件：</label>
+        <!-- 这样label在外边是width是100%-->
+        <input type="email" class="form-control" placeholder="请输入您的邮件"/>
     </div>
+    <div class="form-group has-warning">
+        <label class="control-label">电子邮件：</label>
+        <!-- 这样label在外边是width是100%-->
+        <input type="email" class="form-control" placeholder="请输入您的邮件"/>
+
+
+    </div>
+    <!--8.添加额外图标-->
+    <!--has-feedback相对定位，放在输入框后 -->
+    <div class="form-group has-feedback has-success">
+        <label class="control-label">电子邮件：</label>
+        <!-- 这样label在外边是width是100%-->
+        <input type="email" class="form-control" placeholder="请输入您的邮件"/>
+
+        <!--"glyphicon glyphicon-ok这个是对号，form-control-feedback绝对定位了-->
+        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+    </div>
+    <div class="form-group has-feedback has-success">
+        <label class="control-label">电子邮件：</label>
+        <!-- 这样label在外边是width是100%-->
+        <input type="email" class="form-control" placeholder="请输入您的邮件"/>
+
+        <!--"glyphicon glyphicon-ok这个是对号，form-control-feedback绝对定位了-->
+        <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+    </div>
+    <div class="form-group has-feedback has-success">
+        <label class="control-label">电子邮件：</label>
+        <!-- 这样label在外边是width是100%-->
+        <input type="email" class="form-control" placeholder="请输入您的邮件"/>
+
+        <!--"glyphicon glyphicon-ok这个是对号，form-control-feedback绝对定位了-->
+        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+    </div>
+
+
+    <!--9.输入框大中小-->
+    <input type="email" class="form-control input-lg" placeholder="请输入您的邮件"/>
+    <input type="email" class="form-control" placeholder="请输入您的邮件"/>
+    <input type="email" class="form-control input-sm" placeholder="请输入您的邮件"/>
+
+    <!-- 二。图片-->
+    <!-- 图片圆角，圆形或椭圆形，缩略图加白色边框阴影-->
+    <img src="2.jpg" alt="图片" class="img-rounded"/>
+    <img src="2.jpg" alt="图片" class="img-circle"/>
+    <!-- 图片响应式-->
+    <img src="2.jpg" alt="图片" class="img-thumbnail  img-responsive"/>
+
+
+
 </form>
 
 
 <script src="../jquery-1.11.2.js"></script>
-<script src="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+<script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
