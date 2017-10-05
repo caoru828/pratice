@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css.map"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
+    <title>路径分页和导航组件</title>
+</head>
+<body style="margin: 100px">
+<!--1.路径组件，面包屑导航-->
+    <ol class="breadcrumb">
+        <li><a href="">首页</a></li>
+        <li><a href="">产品列表</a></li>
+        <!-- 默认是这个界面，最后一组不用连接，直接默认active激活状态-->
+        <li class="active">2017韩版大衣</li>
+
+    </ol>
+<!-- 2.分页组件-->
+    <ul class="pagination pagination-lg">
+        <li><a href="#">&laquo;</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li class="disabled"><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+
+    <ul class="pager">
+        <!-- 默认会在居中-->
+        <li><a href="#">上一页</a></li>
+        <li><a href="#">下一页</a></li>
+    </ul>
+
+    <ul class="pager">
+        <!-- 默认会在居中,previous一个在左，一个在右-->
+        <!-- 翻页禁用-->
+        <li class="previous disabled"><a href="#">上一页</a></li>
+        <li class="previous disabled"><a href="#">上一页</a></li>
+        <li class="next"><a href="#">下一页</a></li>
+    </ul>
+
+<!--3.标签-->
+    <!-- 在文本后带上标签-->
+    <h3>标签<span class="label label-default">new</span></h3>
+    <h3>标签<span class="label label-success">new</span></h3>
+    <h3>标签<span class="label label-primary">new</span></h3>
+    <h3>标签<span class="label label-info">new</span></h3>
+    <h3>标签<span class="label label-warning">new</span></h3>
+    <h3>标签<span class="label label-danger">new</span></h3>
+    <h6>标签<span class="label label-default">new</span></h6>
+
+<!--4.徽章-->
+    <!-- 未读信息徽章-->
+    <a href="#">信息<span class="badge">10</span></a>
+    <!--按钮徽章-->
+    <button class="btn btn-success">信息<span class="badge">10</span></button>
+    <button class="btn btn-default">信息<span class="badge">10</span></button>
+    <!-- 激活状态自适配色调-->
+<ul class="nav nav-pills">
+    <li class="active"><a href="#">首页 <span class="badge">10</span></a></li>
+    <li><a href="#">资讯</a></li>
+</ul>
+<script src="../jquery-1.11.2.js"></script>
+<script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
