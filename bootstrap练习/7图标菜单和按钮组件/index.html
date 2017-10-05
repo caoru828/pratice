@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css.map"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
+    <title>图标菜单和按钮组件</title>
+    <style>
+        .a {
+            height: 100px;
+            border: 1px solid #CCCCCC;
+            width: 200px;
+            background-color: #eeeeee;
+        }
+    </style>
+</head>
+<body>
+<!--http://v3.bootcss.com/components/#glyphicons-->
+<!--boostrap小图标-->
+<i class="glyphicon glyphicon-star"></i>
+<sapn class="glyphicon glyphicon-star"></sapn>
+<i class="glyphicon glyphicon-user"></i>
+
+<button  class="btn btn-default btn-lg">
+    <i class="glyphicon glyphicon-star"></i>
+
+</button>
+
+
+<!--2.下拉菜单组件-->
+<!--<div class="dropdown open">-->
+<div class="dropdown">
+<!--<div class="dropup">-->
+    <button class="btn btn-default" data-toggle="dropdown">
+        <!-- 用a也可以-->
+        下拉菜单
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <!-- dropdown-menu与按钮建立联系，dropdown-menu-right居右-->
+
+        <li class="dropdown-header">菜单标题</li>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">资讯</a></li>
+        <!-- 分割线-->
+        <li class="divider"><a href="#">产品</a></li>
+        <li class="disabled"><a href="#">关于</a></li>
+    </ul>
+</div>
+<!--二、按钮组件-->
+
+<div class="btn-toolbar">
+    <!--组合-->
+    <!-- 尺寸-->
+    <div class="btn-group btn-group-lg">
+        <button class="btn btn-default">左</button>
+        <button class="btn btn-default">中</button>
+        <button class="btn btn-default">右</button>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-default">1</button>
+        <button class="btn btn-default">2</button>
+        <button class="btn btn-default">3</button>
+    </div>
+</div>
+
+<!--嵌套一个分组，比如下拉菜单-->
+
+<div class="btn-group">
+    <button class="btn btn-default">1</button>
+    <button class="btn btn-default">2</button>
+    <button class="btn btn-default">3</button>
+    <!-- 嵌套一个分组时，1.将下拉菜单最外层的<div class="dropdown">的class改成btn-group， 2. 在按钮那个栏里，class加一个dropdown-toggle-->
+    <!--这个叫按钮式下拉菜单-->
+    <div class="btn-group">
+        <!--<div class="dropup">-->
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            <!-- 用a也可以-->
+            下拉菜单
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <!-- dropdown-menu与按钮建立联系，dropdown-menu-right居右-->
+
+            <li class="dropdown-header">菜单标题</li>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">资讯</a></li>
+            <!-- 分割线-->
+            <li class="divider"><a href="#">产品</a></li>
+            <li class="disabled"><a href="#">关于</a></li>
+        </ul>
+    </div>
+</div>
+
+<!--  下拉菜单外包一个div<div class="btn-group ">这样做下拉菜单圆角不变，不行-->
+<!--<div class="btn-group ">-->
+    <!--<button class="btn btn-default">左</button>-->
+    <!--<button class="btn btn-default">中</button>-->
+    <!--<button class="btn btn-default">右</button>-->
+    <!--<div class="btn-group ">-->
+        <!--<div class="dropdown">-->
+            <!--&lt;!&ndash;<div class="dropup">&ndash;&gt;-->
+            <!--<button class="btn btn-default" data-toggle="dropdown">-->
+                <!--&lt;!&ndash; 用a也可以&ndash;&gt;-->
+                <!--下拉菜单-->
+                <!--<span class="caret"></span>-->
+            <!--</button>-->
+            <!--<ul class="dropdown-menu">-->
+                <!--&lt;!&ndash; dropdown-menu与按钮建立联系，dropdown-menu-right居右&ndash;&gt;-->
+
+                <!--<li class="dropdown-header">菜单标题</li>-->
+                <!--<li><a href="#">首页</a></li>-->
+                <!--<li><a href="#">资讯</a></li>-->
+                <!--&lt;!&ndash; 分割线&ndash;&gt;-->
+                <!--<li class="divider"><a href="#">产品</a></li>-->
+                <!--<li class="disabled"><a href="#">关于</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--垂直排列-->
+<div class=" btn-group-vertical">
+    <button class="btn btn-default">1</button>
+    <button class="btn btn-default">2</button>
+    <button class="btn btn-default">3</button>
+</div>
+<!--设置两端对齐按钮组，只能用a标签，用button不好使,非得button的话，每一个外边都得加一个分组-->
+<div class=" btn-group-justified">
+    <div class="btn-group">
+        <button class="btn btn-default">1</button>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-default">2</button>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-default">3</button>
+    </div>
+
+</div>
+<div class=" btn-group-justified">
+    <a class="btn btn-default">1</a>
+    <a class="btn btn-default">2</a>
+    <a class="btn btn-default">3</a>
+</div>
+
+
+<!--按钮式下拉菜单-->
+<div class="btn-group">
+    <!--<div class="dropup">-->
+    <button class="btn btn-group">下拉菜单</button>
+    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <!-- 用a也可以-->
+
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <!-- dropdown-menu与按钮建立联系，dropdown-menu-right居右-->
+
+        <li class="dropdown-header">菜单标题</li>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">资讯</a></li>
+        <!-- 分割线-->
+        <li class="divider"><a href="#">产品</a></li>
+        <li class="disabled"><a href="#">关于</a></li>
+    </ul>
+</div>
+<script src="../jquery-1.11.2.js"></script>
+<script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
