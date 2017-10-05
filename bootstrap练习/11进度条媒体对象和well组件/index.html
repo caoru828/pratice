@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!--<link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>-->
+    <!--<link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map"/>-->
+    <!--<link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>-->
+
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css.map"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
+
+    <title>进度条媒体对象和well组件</title>
+</head>
+<body style="margin: 100px">
+<!-- 1.well组件-->
+    <!-- 内嵌效果-->
+    <div class="well well-lg">bootstrap</div>
+    <div class="well">bootstrap</div>
+    <div class="well well-sm">bootstrap</div>
+
+<!-- 2.进度条组件-->
+    <!-- 提供当前共制作流程或动作提供的实时反馈-->
+    <!-- 基本进度条-->
+    <div class="progress">
+        <div class="progress-bar" style="width: 60%">60%</div>
+    </div>
+
+    <!-- 最低值进度条-->
+    <div class="progress">
+        <div class="progress-bar" style="min-width: 20px;  width: 0%;">0%</div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar" style="min-width: 20px;  width: 60%">60%</div>
+    </div>
+
+    <!-- 结合情景的进度条-->
+    <div class="progress">
+        <div class="progress-bar progress-bar-success" style="min-width: 20px;  width: 60%">60%</div>
+    </div>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-danger" style="min-width: 20px;  width: 60%">60%</div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-info" style="min-width: 20px;  width: 60%">60%</div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-warning" style="min-width: 20px;  width: 60%">60%</div>
+    </div>
+
+
+     <!-- 条纹状 IE10+支持，火狐谷歌支持-->
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-success" style="min-width: 20px;  width: 60%">60%</div>
+    </div>
+
+    <!-- 动画效果-->
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-success active" style="min-width: 20px;  width: 60%">60%</div>
+    </div>
+
+    <!-- 堆叠效果-->
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-danger " style="min-width: 20px;  width: 20%">20%</div>
+        <div class="progress-bar progress-bar-striped progress-bar-warning " style="min-width: 20px;  width: 40%">40%</div>
+        <div class="progress-bar progress-bar-striped progress-bar-success " style="min-width: 20px;  width: 40%">40%</div>
+    </div>
+    <br/>
+<!-- 3.媒体对象组件-->
+    <!-- 可以包含图片，视频。音频等媒体，以达到对象和文本组合显示的样式效果-->
+    <div class="media">
+
+
+         <!-- ?????media-middle"不好使-->
+        <div class="media-left media-middle">
+            <img src="5.jpg" alt="" class="media-object"/>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">这是一张图片</h4>
+            <p>得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发地方解决分红覅加了房价</p>
+        </div>
+    </div>
+    <div class="media">
+        <div class="media-body">
+            <h4 class="media-heading">这是一张图片</h4>
+            <p>得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发地方解决分红覅加了房价</p>
+        </div>
+        <div class="media-left media-middle">
+            <img src="5.jpg" alt="" class="media-object"/>
+        </div>
+    </div>
+     <!-- 媒体对象列表-->
+        <!-- 主要评论回帖-->
+        <ul class="media-list">
+            <li class="media">
+                <div class="media-left media-top">
+                    <img src="5.jpg" alt="" class="media-object"/>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">这是一张图片</h4>
+                    <p>得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发地方解决分红覅加了房价</p>
+                    <div class="media">
+                        <div class="media-left media-top">
+                            <img src="5.jpg" alt="" class="media-object"/>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">这是一张图片</h4>
+                            <p>得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发地方解决分红覅加了房价</p>
+                            <div class="media">
+                                <div class="media-left media-top">
+                                    <img src="5.jpg" alt="" class="media-object"/>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">这是一张图片</h4>
+                                    <p>得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发地方解决分红覅加了房价</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="media">
+                        <div class="media-left media-top">
+                            <img src="5.jpg" alt="" class="media-object"/>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">这是一张图片</h4>
+                            <p>得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发地方解决分红覅加了房价</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </li>
+            <li class="media">
+                <div class="media-left media-top">
+                    <img src="5.jpg" alt="" class="media-object"/>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">这是一张图片</h4>
+                    <p>得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发得放假阿附近的惊世毒妃马上离开Skype自己接发地方解决分红覅加了房价</p>
+                </div>
+
+            </li>
+
+        </ul>
+<!--<script src="../jquery-1.11.2.js"></script>-->
+<!--<script src="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>-->
+
+<script src="../jquery-1.11.2.js"></script>
+<script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
