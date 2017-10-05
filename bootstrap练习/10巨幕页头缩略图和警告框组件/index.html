@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!--<link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>-->
+    <!--<link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map"/>-->
+    <!--<link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>-->
+
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css.map"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
+
+    <title>巨幕页头缩略图和警告框组件</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- 1.巨幕组件，-->
+        <!-- 展示网页最关键区域，在固定范围内有圆角-->
+        <!-- 固定-->
+        <div class="container">
+            <div class="jumbotron">
+                <h3>网站标题</h3>
+
+                <p>我手机网站详细介绍</p>
+
+                <p><a href="#" class="btn btn-default">快速进入</a></p>
+            </div>
+        </div>
+        <!-- 反过来-->
+
+        <div class="jumbotron">
+            <div class="container">
+                <h3>网站标题</h3>
+
+                <p>我手机网站详细介绍</p>
+
+                <p><a href="#" class="btn btn-default">快速进入</a></p>
+            </div>
+        </div>
+    <!-- 2.页头组件-->
+        <div class="page-header">
+            <!-- 加了点上下边距，下边有一条线-->
+            <h1>我是大标题
+                <small>我是小标题</small>
+            </h1>
+        </div>
+    <!-- 3.缩略图组件-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="5.jpg" alt="tupian"/>
+                        <!-- 自定义内容-->
+                        <div class="caption">
+                            <!-- caption加个小边边，就是不用和左边框那么近-->
+                            <h3> 图片</h3>
+
+                            <p> 这张图片的详情</p>
+
+                            <p><a href=""> 快速进入</a></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="5.jpg" alt="tupian"/>
+
+                        <div class="caption">
+                            <!-- caption加个小边边，就是不用和左边框那么近-->
+                            <h3> 图片</h3>
+
+                            <p> 这张图片的详情</p>
+
+                            <p><a href=""> 快速进入</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="5.jpg" alt="tupian"/>
+
+                        <div class="caption">
+                            <!-- caption加个小边边，就是不用和左边框那么近-->
+                            <h3> 图片</h3>
+
+                            <p> 这张图片的详情</p>
+
+                            <p><a href=""> 快速进入</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="5.jpg" alt="tupian"/>
+
+                        <div class="caption">
+                            <!-- caption加个小边边，就是不用和左边框那么近-->
+                            <h3> 图片</h3>
+
+                            <p> 这张图片的详情</p>
+
+                            <p><a href=""> 快速进入</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- 4.警告框组件-->
+        <div class="alert alert-success" style="margin:0 100px;">
+            我是一个成功的警告框！请下载 <a href="" class="alert-link">最新版本</a>
+            <button class="close" data-dismiss="alert"><span>&times;</span></button>
+            <!-- data-dismiss="alert"连接js，点击这个框消失-->
+        </div>
+
+        <br/>
+
+        <div class="alert alert-info" style="margin:0 100px;">
+            我是一个信息警告框！
+        </div>
+        <br/>
+        <div class="alert alert-warning" style="margin:0 100px;">
+            我是一警告警告框！
+        </div>
+        <br/>
+        <div class="alert alert-danger" style="margin:0 100px;">
+            我是一个危险的警告框！
+        </div>
+        <br/>
+
+    <!--<script src="../jquery-1.11.2.js"></script>-->
+    <!--<script src="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>-->
+
+    <script src="../jquery-1.11.2.js"></script>
+    <script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
