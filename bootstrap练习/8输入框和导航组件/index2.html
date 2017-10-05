@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css.map"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
+    <title>导航组件</title>
+</head>
+<body style="margin: 200px">
+
+    <ul class="nav nav-tabs">
+        <!-- nav-tabs实现标签导航-->
+        <!-- nav去掉小圆点，更改间距-->
+        <li class="active"><a href="#">首页</a></li>
+        <!-- active默认选中状态-->
+        <li><a href="#">资讯</a></li>
+        <li><a href="#">产品</a></li>
+        <li><a href="#">关于</a></li>
+    </ul>
+    <br/>
+    <ul class="nav nav-pills">
+        <!-- nav-pills胶囊是-->
+        <!-- nav去掉小圆点，更改间距-->
+        <li class="active"><a href="#">首页</a></li>
+        <!-- active默认选中状态-->
+        <li><a href="#">资讯</a></li>
+        <li><a href="#">产品</a></li>
+        <li><a href="#">关于</a></li>
+    </ul>
+    <br/>
+    <ul class="nav nav-pills nav-stacked">
+        <!-- nav-stacked垂直式-->
+        <!-- nav-pills胶囊是-->
+        <!-- nav去掉小圆点，更改间距-->
+        <li class="active"><a href="#">首页</a></li>
+        <!-- active默认选中状态-->
+        <li><a href="#">资讯</a></li>
+        <li><a href="#">产品</a></li>
+        <li><a href="#">关于</a></li>
+    </ul>
+    <br/>
+    <ul class="nav nav-tabs nav-justified">
+        <!-- 两端对齐-->
+        <!-- nav-stacked垂直式-->
+        <!-- nav-pills胶囊是-->
+        <!-- nav去掉小圆点，更改间距-->
+        <li class="active"><a href="#">首页</a></li>
+        <!-- active默认选中状态-->
+        <li><a href="#">资讯</a></li>
+        <li><a href="#">产品</a></li>
+        <li><a href="#">关于</a></li>
+    </ul>
+    <br/>
+<!--带有下拉菜单的导航-->
+    <ul class="nav nav-tabs nav-justified">
+        <!-- 两端对齐-->
+        <!-- nav-stacked垂直式-->
+        <!-- nav-pills胶囊是-->
+        <!-- nav去掉小圆点，更改间距-->
+        <li class="active"><a href="#">首页</a></li>
+        <!-- active默认选中状态-->
+        <li><a href="#">资讯</a></li>
+        <li><a href="#">产品</a></li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" >下拉菜单
+            <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">导航</a></li>
+                <li><a href="#">资讯</a></li>
+                <li><a href="#">关于</a></li>
+            </ul>
+        </li>
+        <li><a href="#">关于</a></li>
+    </ul>
+    <br/>
+
+
+
+
+<script src="../jquery-1.11.2.js"></script>
+<script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

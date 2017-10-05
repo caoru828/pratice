@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css.map"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
+    <title>输入框和导航组件</title>
+</head>
+<body style="margin: 200px">
+<!--input-group整合在一组-->
+<div class="input-group">
+    <span class="input-group-addon">@</span>
+    <input type="text" class="form-control"/>
+    <!-- form-control默认样式，w100-->
+</div>
+<br/>
+<div class="input-group">
+
+    <input type="text" class="form-control"/>
+    <span class="input-group-addon">@163.com</span>
+</div>
+<br/>
+<div class="input-group">
+    <span class="input-group-addon">$</span>
+    <input type="text" class="form-control"/>
+    <span class="input-group-addon">.00</span>
+</div>
+<br/>
+
+<!--添加复选框单选框，大小-->
+<div class="input-group input-group-lg">
+    <span class="input-group-addon"><input type="checkbox"/></span>
+    <input type="text" class="form-control"/>
+    <span class="input-group-addon"><input type="radio"/></span>
+</div>
+<br/>
+<!--按钮输入框合并,input-group-btn,而按钮按钮合并就是btn-group-->
+<div class="input-group">
+    <input type="text" class="form-control"/>
+    <div class="input-group-btn">
+        <button class="btn btn-default">提交</button>
+    </div>
+</div>
+<br/>
+<!--下拉菜单输入框合并-->
+<div class="input-group">
+    <input type="text" class="form-control"/>
+    <!-- 下拉菜单时这个下拉菜单的外的div也必须是input-group-btn-->
+    <div class="input-group-btn">
+        <!--<div class="dropup">-->
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            <!-- 用a也可以-->
+            下拉菜单
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <!-- dropdown-menu与按钮建立联系，dropdown-menu-right居右-->
+
+            <li class="dropdown-header">菜单标题</li>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">资讯</a></li>
+            <!-- 分割线-->
+            <li class="divider"><a href="#">产品</a></li>
+            <li class="disabled"><a href="#">关于</a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="../jquery-1.11.2.js"></script>
+<script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
