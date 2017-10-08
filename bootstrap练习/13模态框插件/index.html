@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!--<link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>-->
+    <!--<link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map"/>-->
+    <!--<link rel="stylesheet" href="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>-->
+
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css.map"/>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
+    <title>模态框插件</title>
+</head>
+<body style="margin: 100px">
+<!--弹窗-->
+<!--一.基本用法-->
+<!-- 1.模态框组件有三层div容器元素，1.model（模态声明层）2.dialog（窗口声明层）3.content（内容层----分1.header头部。2.body主体.3.footer注脚）-->
+<!--模态框声明-->
+<!--<div class="modal show">-->
+<!-- 正常不显示，show是方便看-->
+
+<!--<div class="modal" id="myModal" tabindex="-1">-->
+    <!-- tabindex="-1"（esc关闭弹窗）无所谓焦点，焦点在框上，敲esc就关闭了，没有tabindex="-1"，焦点不在框上，不好使-->
+<div class="modal fade" id="myModal" tabindex="-1">
+    <!-- 窗口声明-->
+    <!--<div class="modal-dialog modal-sm">-->
+    <!--<div class="modal-dialog modal-lg">-->
+    <div class="modal-dialog">
+        <!-- 内容声明-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- close显示正常好看的关闭按钮，data-dismiss="modal"点击能关闭，调用js部分，实现关闭效果,
+                现在关闭不了，因为这个模态框默认显示状态，只有开始模态框隐藏，后来点开了，在按关闭才好使-->
+                <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                <!-- modal-title上下间距去掉-->
+                <h4 class="modal-title">会员登录</h4>
+            </div>
+            <div class="modal-body">
+                <p>暂时无法注册</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default">注册</button>
+                <button class="btn btn-primary">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- data-toggle="modal"声明这个是一个模态框按钮，目标点data-target="#myModal"这回连接上了，点击他就干掉了-->
+<!--<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">click window</button>-->
+
+<button class="btn btn-primary" id="btn">click window</button>
+
+<!--<button class="btn btn-primary" data-toggle="modal" data-target="#myModal" href="content.html">click window</button> 这个界面加载时，弹出框直接加载content.html  -->
+<!--<button class="btn btn-primary" data-toggle="modal"  data-backdrop="false" data-target="#myModal">click window</button>-->
+
+<!-- 2.弹窗的大小，默认正常，还有lg大，sm小-->
+<!--<div class="model-dialog modal-lg">bbb</div>-->
+<!--<div class="model-dialog modal-sm">ssssss</div>-->
+
+<!-- 3.可设置淡入淡出效果-->
+<!--<div class="modal fade" id="myModal" tabindex="-1"></div>-->
+
+<!-- 4.在主体部分可以使用栅格系统中的流体-->
+<!--<div class="modal-body">-->
+    <!--<div class="container-fluid">-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-4">1</div>-->
+            <!--<div class="col-md-4">2</div>-->
+            <!--<div class="col-md-4">3</div>-->
+        <!--</div>-->
+    <!--</div> -->
+<!--</div>-->
+
+<!-- 二.用法说明-->
+
+<!-- 1.用法，可以通过data属性 -->
+<!--  data-toggle="modal",模态框属性 , data-target="myModel"定位在哪个模态框属性-->
+<!--如果×掉的按钮不是button，是a的话，data-target也可以使用href=“#myModal”，一般不这么用-->
+
+<!-- 2.参数-->
+<!-- (boolean或static)  data-backdrop="true"(默认)，点黑灰色处可以关闭。false没有灰黑色，并且点空白不可关闭  ="static"背景黑灰色还有但是点击黑灰色不好使，关闭不了-->
+<!--  （boolean）  data-keyboard = "true(默认)"按esc会关闭弹窗，false，按esc不会关闭弹窗  -->
+<!-- （boolean）   data-show="show"(默认)，初始化，默认显示，false。初始化默认隐藏（点两下就出来了，主要jQuery设置的时候会用到）-->
+<!--  (url路径)    小1.href="#myModal"替代data-target <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" href="#myModal">click window</button>
+小2.远程加载，<button class="btn btn-primary" data-toggle="modal" data-target="#myModal" href="content.html">click window</button> 这个界面加载时，弹出框直接加载content.html
+content.html内容放modal-content里边的内容-->
+<!--以上这写也可以通过jQuery设置-->
+
+
+
+<!--<script src="../jquery-1.11.2.js"></script>-->
+<!--<script src="../../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>-->
+
+
+
+<script src="../jquery-1.11.2.js"></script>
+<script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<!--3.通过jQuery声明-->
+<script>
+
+    $(function(){
+//<button class="btn btn-primary" id="btn">click window</button>把里边的data干掉，用jq操作
+
+
+        $("#btn").on("click",function(){
+            $('#myModal').modal("show");
+//          alert("");
+        })
+    });
+//    $('#myModal').modal();这个默认自动加载
+    $('#myModal').modal({
+       show:false
+    });
+
+
+//jq声明
+    //        $('#myModal').modal({
+    //            show:true,
+    //            backdrop:false,
+    //            keyboard:false,
+    //            remote:"index.html"
+    ////            url路径，远程控制的modal-content
+    //        });
+    //    })
+
+
+
+//    4.事件
+//    模态框支持4种事件，弹出前，弹出后，关闭前，关闭后
+// show.bs.modal(show方法调用完立即触发)                    shown.bs.modal(在模态框完全显示出来，并且css动画完成之后触发)
+// hide.bs.modal(在hide方法调用时，但还未关闭隐藏时触发)    hidden.bs.modal(在模态框完全隐藏之后，并且等常熟市、动画完成之后触发)
+    $('#myModal').on("show.bs.modal",function(){
+        alert("当调用show方法时立即触发");
+    });
+    $('#myModal').on("shown.bs.modal",function(){
+        alert("当弹窗完全出现在执行");
+    });
+    $('#myModal').on("hide.bs.modal",function(){
+        alert("当调用hide方法时立即触发");
+    });
+    $('#myModal').on("hidden.bs.modal",function(){
+        alert("当弹窗完全关闭后触发");
+    });
+    $('#myModal').on("loaded.bs.modal",function(){
+        alert("当远程加载后触发");//默认先远程加载， remote:"content.html"，默认加载一次，远程先加载进来，点击的时候才执行，所以只加载一次
+    })
+</script>
+</body>
+</html>
