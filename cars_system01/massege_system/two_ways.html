@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>mass-texting</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+    <meta name="description" content="">
+    <meta name="author" content="ThemeBucket">
+
+
+
+    <!--common-->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/caoru-massege-css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/caoru-massege-css/mass-texting.css"/>
+
+    <!--<link href="jquery-time-141128100922/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link href="jquery-time-141128100922/font-awesome.min.css" rel="stylesheet">-->
+    <!--<link rel="stylesheet" type="text/css" media="all" href="jquery-time-141128100922/daterangepicker-bs3.css"/>-->
+    <!--<script type="text/javascript" src="jquery-time-141128100922/jquery-1.8.3.min.js"></script>-->
+    <!--<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
+    <!--<script type="text/javascript" src="jquery-time-141128100922/moment.js"></script>-->
+    <!--<script type="text/javascript" src="jquery-time-141128100922/daterangepicker.js"></script>-->
+    <style>
+        .guoQing{
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            width: 100%;
+            height: 100%;
+        }
+        .guoQing_header{
+            /*text-align: center;*/
+            border-bottom: 1px solid #ddd;
+            margin:25px 25px 0 25px;
+            padding-bottom: 25px;;
+            font-size: 22px;
+        }
+        .guoQing_header span{
+            color:  #666666;
+            font-weight: bold;
+            margin-left: -31px;
+        }
+        .guoQing_header a{
+            float: left;
+        }
+        .guoQing_header_title{
+            text-align: center;
+            /*display: inline;*/
+        }
+        .guoQing_content_time{
+            font-size: 14px;
+            padding: 15px 4px 15px 0;
+            text-align: center;
+        }
+        .guoQing_content_time span{
+            padding-left: 60px;
+        }
+        .guoQing_content{
+            font-size: 20px;
+            padding-bottom: 20px;
+            margin-left: 25px;
+        }
+        .marginB30{
+            margin-bottom: 30px;
+        }
+        .guoQing_content p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div id="logo"></div>
+    <div id="nav">
+        <ul>
+
+            <li>guangshen（系统管理员）</li>
+            <li>系统消息</li>
+            <li>使用教程</li>
+            <li class="seleted">app下载</li>
+
+        </ul>
+    </div>
+</header>
+<contion>
+    <div class="left-side-inner">
+
+        <ul class="nav nav-pills nav-stacked custom-nav">
+            <li class="menu-list"><a href=""><i class="fa fa-laptop"></i> <span>客户管理</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href=""> 新增报价</a></li>
+                    <li><a href="">客户列表</a></li>
+                    <li><a href=""> 批量续保</a></li>
+                    <li><a href="">预约单列表</a></li>
+                    <li><a href="">已出保单</a></li>
+                    <li><a href="">战败列表</a></li>
+                    <li><a href="">回收站</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-list"><a href=""><i class="fa fa-book"></i> <span>业务员管理</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">业务员列表</a></li>
+                    <li><a href="">业务员注册</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-list"><a href=""><i class="fa fa-cogs"></i> <span>财务管理</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">台账录入</a></li>
+                    <li><a href="">台账列表</a></li>
+
+
+                </ul>
+            </li>
+
+            <li class="menu-list"><a href=""><i class="fa fa-envelope"></i> <span>销售管理</span></a>
+                <ul class="sub-menu-list" style="display: block">
+                    <li><a href="#" class="active">短信群发</a></li>
+                    <li><a href="../cr-html/message-report.html">短信发送记录</a></li>
+                    <li><a href="../cr-html/message-report.html">短信充值</a></li>
+                    <li><a href="../cr-html/sale-activity.html">营销活动</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-list"><a href=""><i class="fa fa-tasks"></i> <span>统计模块</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">业务统计</a></li>
+                    <li><a href="">战败分析</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-list"><a href=""><i class="fa fa-bar-chart-o"></i> <span>呼叫模块</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">呼叫统计</a></li>
+                    <li><a href="">通话记录</a></li>
+                </ul>
+            </li>
+            <li class="menu-list"><a href="#"><i class="fa fa-th-list"></i> <span>系统设置</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">分配设置</a></li>
+                    <li><a href="">战败原因设置</a></li>
+                    <li><a href="">客户类别设置</a></li>
+                    <li><a href="">报价渠道</a></li>
+                    <li><a href="">权限管理</a></li>
+                </ul>
+            </li>
+
+        </ul>
+        <!--sidebar nav end-->
+    </div>
+    <div class="message-container">
+        <div class="container">
+            <div class="guoQing">
+                <div  class="guoQing_header">
+                    <a href=""> <<&nbsp;返回 </a>
+                    <div class="guoQing_header_title">
+                        <span>
+
+        车型校验支持车架号和品牌型号两种方式
+
+                    </span>
+                    </div>
+
+                </div>
+                <div class="guoQing_content">
+                    <div class="guoQing_content_time">
+                        <span>2017-09-23</span>
+                    </div>
+                    <p class="marginB40">1.选择险种页展示发动机号和车架号，并支持点击车架号后的车型校验进行车型查询</p>
+
+                    <p>目前只支持平安的车架号查询，没有平安渠道时，不展示此按钮</p>
+
+                    <p>平安渠道无法正常报价时，车架号也无法查询出车型列表</p>
+
+                    <img src="../images/cr-img/two_ways.jpg" alt="" class="marginB20"/>
+
+                    <p>2.续保失败时不再自动进行车型校验，需要手动点击车架号或品牌型号后的校验按钮进行查询车型并选择，没有车型时无法提交报价。</p>
+
+                    <img src="../images/cr-img/two_ways_2.jpg" alt="" class="marginB20"/>
+
+                    <p class="marginB30">3.详情页同样支持两种选择。</p>
+
+                    <p>点击品牌型号后面的 车型查询 按钮，车型就按照品牌型号查</p>
+
+                    <p>点击车架号后面的 车型校验 按钮，车型就按照车架号查</p>
+
+                    <img src="../images/cr-img/two_ways_3.jpg" alt="" class="marginB20"/>
+
+                    <p>以上。</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</contion>
+
+
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/modernizr.min.js"></script>
+<script src="../js/jquery.nicescroll.js"></script>
+<script src="../js/scripts.js"></script>
+<script src="../js/cr-message-js/jquery-1.12.4.js"></script>
+<script src="../js/cr-message-js/message.js"></script>
+
+<script>
+
+</script>
+</body>
+</html>

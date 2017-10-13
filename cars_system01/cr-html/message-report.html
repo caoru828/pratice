@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>massage-report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords"
+          content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+
+
+    <link rel="stylesheet" type="text/css" media="all" href="../jquery-time-141128100922/daterangepicker-bs3.css"/>
+    <link rel="stylesheet" href="../css/caoru-massege-css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/caoru-massege-css/mass-texting.css"/>
+
+
+    <!--common-->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../jquery-time-141128100922/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../jquery-time-141128100922/moment.js"></script>
+    <script type="text/javascript" src="../jquery-time-141128100922/daterangepicker.js"></script>
+
+    <style>
+
+        .modal-header .close {
+            color: grey;
+        }
+
+        .modal-header {
+            padding: 14px;
+            color: black;
+            border-radius: 6px 0 0 0;
+        }
+
+        .modal-content {
+            border-radius: 6px 6px 0;
+        }
+
+        .modal-left {
+            background-color: transparent;
+            overflow-y: visible;
+            overflow-x: visible;
+            width: 40%;
+            left: inherit;
+
+            border-radius: 6px;
+            z-index: 89991;
+        }
+
+        .modal-dialog-right {
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        }
+
+        .modal-right-arrow {
+            height: 16px;
+            position: relative;
+            top: -2px;
+            left: -1px;
+        }
+
+        .rightArr-modal-header {
+            height: 49px;
+        }
+
+        .modal-massage-content {
+            font-size: 18px;
+        }
+
+        .marginB80 {
+            margin-bottom: 80px;
+        }
+/*日历表*/
+        .calendar_group{
+            height: 50px;
+            width: 270px;
+            position:relative;
+        }
+        #reservation,#reservation2,#reservation3{
+            width: 160px;
+            position: absolute;
+            right: 0;
+            top: -7px;
+        }
+        #reservation2,#reservation3{
+            width: 160px;
+            position: absolute;
+            right: 15px;
+            top: -7px;
+        }
+        .calendar_group_label{
+            position: absolute;
+            left: 0;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+    </style>
+
+
+    <!--<link href="jquery-time-141128100922/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link href="jquery-time-141128100922/font-awesome.min.css" rel="stylesheet">-->
+    <!--<link rel="stylesheet" type="text/css" media="all" href="jquery-time-141128100922/daterangepicker-bs3.css"/>-->
+    <!--<script type="text/javascript" src="jquery-time-141128100922/jquery-1.8.3.min.js"></script>-->
+    <!--<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
+    <!--<script type="text/javascript" src="jquery-time-141128100922/moment.js"></script>-->
+    <!--<script type="text/javascript" src="jquery-time-141128100922/daterangepicker.js"></script>-->
+
+</head>
+<body>
+<header>
+    <div id="logo"></div>
+    <div id="nav">
+        <ul>
+
+            <li>guangshen（系统管理员）</li>
+            <li><a href="../massege_system/system_message_.html" style="color: black">系统消息</a></li>
+            <li>使用教程</li>
+            <li class="seleted">app下载</li>
+
+        </ul>
+    </div>
+</header>
+<contion>
+    <div class="left-side-inner">
+
+        <ul class="nav nav-pills nav-stacked custom-nav">
+            <li class="menu-list"><a href=""><i class="fa fa-laptop"></i> <span>客户管理</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href=""> 新增报价</a></li>
+                    <li><a href="">客户列表</a></li>
+                    <li><a href=""> 批量续保</a></li>
+                    <li><a href="">预约单列表</a></li>
+                    <li><a href="">已出保单</a></li>
+                    <li><a href="">战败列表</a></li>
+                    <li><a href="">回收站</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-list"><a href=""><i class="fa fa-book"></i> <span>业务员管理</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">业务员列表</a></li>
+                    <li><a href="">业务员注册</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-list"><a href=""><i class="fa fa-cogs"></i> <span>财务管理</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">台账录入</a></li>
+                    <li><a href="">台账列表</a></li>
+
+
+                </ul>
+            </li>
+
+            <li class="menu-list"><a href=""><i class="fa fa-envelope"></i> <span>销售管理</span></a>
+                <ul class="sub-menu-list" style="display: block">
+                    <li><a href="mass-texting.html" class="active">短信群发</a></li>
+                    <li><a href="#">短信发送记录</a></li>
+                    <li><a href="massage-recharge.html">短信充值</a></li>
+                    <li><a href="sale-activity.html">营销活动</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-list"><a href=""><i class="fa fa-tasks"></i> <span>统计模块</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">业务统计</a></li>
+                    <li><a href="">战败分析</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-list"><a href=""><i class="fa fa-bar-chart-o"></i> <span>呼叫模块</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">呼叫统计</a></li>
+                    <li><a href="">通话记录</a></li>
+                </ul>
+            </li>
+            <li class="menu-list"><a href="#"><i class="fa fa-th-list"></i> <span>系统设置</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">分配设置</a></li>
+                    <li><a href="">战败原因设置</a></li>
+                    <li><a href="">客户类别设置</a></li>
+                    <li><a href="">报价渠道</a></li>
+                    <li><a href="">权限管理</a></li>
+                </ul>
+            </li>
+
+        </ul>
+        <!--sidebar nav end-->
+    </div>
+
+    <!-- 短信发送记录开始-->
+    <div class="message-container">
+        <div class="container">
+            <div class="message-report-first">
+                <div class="message-report-firstLine">
+
+
+
+                    <form class="form-horizontal form-inline">
+                        <div class="col-md-3 col-sm-12 col-xs-12 marginB10 paddingL0">
+                            <div class="control-group">
+                                <div class="controls">
+                                    <div class="input-prepend input-group calendar_group paddingL0">
+                                        <label class="calendar_group_label">
+                                            发送时间： </label>
+                                        <input
+                                                type="text" readonly style="width: 200px;font-size: 12px"
+                                                name="reservation"
+                                                id="reservation"
+                                                class="form-control" value="发送时间"/>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-12 col-xs-12 marginB10 paddingL0">
+                            <div class="control-group">
+                                <div class="controls">
+                                    <div class="input-prepend input-group calendar_group">
+                                        <label class="calendar_group_label">
+                                            接收人： </label>
+                                        <input
+                                                type="text" readonly style="width: 200px;font-size: 12px"
+                                                name="reservation"
+                                                id="reservation2"
+                                                class="form-control" value="接收人"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-12 col-xs-12 marginB10 paddingL0">
+                            <div class="control-group">
+                                <div class="controls">
+                                    <div class="input-prepend input-group calendar_group">
+                                        <label class="calendar_group_label">
+                                            业务员： </label>
+                                        <input
+                                                type="text" readonly style="width: 200px;font-size: 12px"
+                                                name="reservation"
+                                                id="reservation3"
+                                                class="form-control" value="业务员"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+
+
+                </div>
+
+                <div class="row message-report-secondLine paddingL20">
+                    <div class="col-md-9 row-2">
+                        <span class="message-number-header"> 可用短信数量：</span>
+                        <span class="message-number"> 31条</span>
+
+                        <div class="message-btn">
+                            <button class="btn btn-danger">搜索</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive col-md-11 paddingL0" id="report-table">
+                    <table class="table  table-bordered table-hover table-tr-pointer">
+                        <thead>
+                        <tr class="text-center">
+                            <td>发送时间</td>
+                            <td>接收人</td>
+                            <td>车牌号</td>
+                            <td>业务员</td>
+                            <td>短信内容</td>
+                        </tr>
+                        </thead>
+                        <tbody class="text-center">
+                        <tr data-toggle="modal" data-target="#myModal_content" data-backdrop="false">
+                            <td>2017/9/25 16:48:13</td>
+                            <td>13624514018</td>
+                            <td>黑A925NL</td>
+                            <td>赵丽华</td>
+                            <td>尊敬的黑A925NL车主，您的车险即将到期，平安车险报价：交</td>
+                        </tr>
+                        <tr data-toggle="modal" data-target="#myModal_content" data-backdrop="false">
+                            <td>2017/9/25 16:36:22</td>
+                            <td>18376041666</td>
+                            <td>黑A5415A</td>
+                            <td>赵丽华</td>
+                            <td>尊敬的黑A5415A车主，您的车险即将到期，平安车险报价：交</td>
+                        </tr>
+                        <tr data-toggle="modal" data-target="#myModal_content" data-backdrop="false">
+                            <td>2017/9/25 16:23:42</td>
+                            <td>18846813370</td>
+                            <td>黑AC831B</td>
+                            <td>赵丽华</td>
+                            <td>尊敬的黑AC831B车主，您的车险即将到期，人保车险报价：交</td>
+                        </tr>
+                        <tr data-toggle="modal" data-target="#myModal_content" data-backdrop="false">
+                            <td>2017/9/25 16:12:52</td>
+                            <td>13836018767</td>
+                            <td>黑A4W757</td>
+                            <td>赵丽华</td>
+                            <td>尊敬的黑A4W757车主，您的车险即将到期，人保车险报价：交</td>
+                        </tr>
+                        <tr data-toggle="modal" data-target="#myModal_content" data-backdrop="false">
+                            <td>2017/9/25 16:04:44</td>
+                            <td>15846598642</td>
+                            <td>黑AE235X</td>
+                            <td>赵丽华</td>
+                            <td>尊敬的黑AE235X车主，您的车险即将到期，人保车险报价：交</td>
+                        </tr>
+                        <tr data-toggle="modal" data-target="#myModal_content" data-backdrop="false">
+                            <td>2017/9/22 11:08:15</td>
+                            <td>15663446335</td>
+                            <td>黑AT991U</td>
+                            <td>赵丽华</td>
+                            <td>尊敬的黑AT991U车主，您的车险即将到期，平安车险报价：交</td>
+                        </tr>
+                        <tr data-toggle="modal" data-target="#myModal_content" data-backdrop="false">
+                            <td>2017/9/21 11:15:40</td>
+                            <td>13936568825</td>
+                            <td>黑A2X213</td>
+                            <td>张鹏</td>
+                            <td>尊敬的黑A2X213车主，您的车险即将到期，平安车险报价：交</td>
+                        </tr>
+                        <tr data-toggle="modal" data-target="#myModal_content" data-backdrop="false">
+                            <td>2017/9/21 10:48:54</td>
+                            <td>18845380541</td>
+                            <td>黑A2Y013</td>
+                            <td>张鹏</td>
+                            <td>尊敬的黑A2Y013车主，您的车险即将到期，平安车险报价：交</td>
+                        </tr>
+                        <tr data-toggle="modal" data-target="#myModal_content" data-backdrop="false">
+                            <td>2017/9/21 10:48:24</td>
+                            <td>13206665250</td>
+                            <td>黑A2Y013</td>
+                            <td>张鹏</td>
+                            <td>尊敬的黑A2Y013车主，您的车险即将到期，平安车险报价：交</td>
+                        </tr>
+                        <tr data-toggle="modal" data-target="#myModal_content" data-backdrop="false">
+                            <td>2017/9/21 10:25:58</td>
+                            <td>13845047405</td>
+                            <td>黑ASR165</td>
+                            <td>张鹏</td>
+                            <td>尊敬的黑ASR165车主，您的车险即将到期，人保车险报价：交</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+                <div class="modal fade  modal-left" id="myModal_content" tabindex="-1">
+                    <!-- 窗口声明-->
+                    <!--<div class="modal-dialog modal-sm">-->
+                    <!--<div class="modal-dialog modal-lg">-->
+                    <div class="modal-dialog  modal-dialog-right">
+                        <!-- 内容声明-->
+                        <div class="modal-content">
+                            <div class="modal-header rightArr-modal-header">
+                                <!-- close显示正常好看的关闭按钮，data-dismiss="modal"点击能关闭，调用js部分，实现关闭效果,
+                                现在关闭不了，因为这个模态框默认显示状态，只有开始模态框隐藏，后来点开了，在按关闭才好使-->
+                                <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                                <!-- modal-title上下间距去掉-->
+                                <img src="resizeApi.png" alt="" class="modal-right-arrow" data-dismiss="modal"/>
+
+                                <span class="modal-title modal-massage-content">短信内容</span>
+
+                            </div>
+                            <div class="modal-body marginB80">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <!-- panel-title比较兼容，符合整个格局，大小样式-->
+                                        <h2 class="panel-title">短信内容详情信息</h2>
+                                    </div>
+                                    <div class="panel-body">
+                                        尊敬的黑A925NL车主，您的车险即将到期，平安车险报价：交强险855元，车船税420元，商业险1715.93元（商业险包含：车损6.65万、三者50万、车损无法找到第三方险、不计免赔）
+                                        总计2990.93元。送400元油卡，送1800元售后大礼包（包含：免费原厂喷漆一块、全年64项检测、全年免费取送维修车辆）。联系人：赵丽华，联系电话：13136657617，13069706763
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="pagination-operation text-center">
+                    <ul class="pagination marginT40">
+                        <li><a href="#"> <span>首页</span></a></li>
+                        <li><a href="#"> <span>上一页</span></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#"><span>下一页</span></a></li>
+                        <li><a href="#"><span>末页</span></a></li>
+                    </ul>
+                    <div class="footer-page-discribe">
+                        <div class="input-group width70 height32">
+                            <input type="text" class="form-control width70 height32" placeholder="页码"
+                                   style="font-size: 11px"/>
+
+                            <div class="input-group-btn width40 height32">
+                                <button class="btn btn-default width40 height32">Go</button>
+                            </div>
+                        </div>
+                        <span class="total-report">总共20条记录</span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- 短信发送记录结束-->
+</contion>
+
+
+<!--<script src="../js/jquery-1.10.2.min.js"></script>-->
+<!--<script src="../js/jquery-ui-1.9.2.custom.min.js"></script>-->
+<!--<script src="../js/jquery-migrate-1.2.1.min.js"></script>-->
+<script src="../js/bootstrap.min.js"></script>
+<!--<script src="../js/modernizr.min.js"></script>-->
+<!--<script src="../js/jquery.nicescroll.js"></script>-->
+<!--<script src="../js/scripts.js"></script>-->
+<!--<script src="../js/jquery-1.12.4.js"></script>-->
+<!--<script src="../js/cr-message-js/message.js"></script>-->
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#reservation').daterangepicker(null, function (start, end, label) {
+            console.log(start.toISOString(), end.toISOString(), label);
+        });
+    });
+
+    $('#reservation2').daterangepicker(null, function (start, end, label) {
+        console.log(start.toISOString(), end.toISOString(), label);
+    });
+        $('#reservation3').daterangepicker(null, function (start, end, label) {
+            console.log(start.toISOString(), end.toISOString(), label);
+
+        });
+</script>
+</body>
+</html>

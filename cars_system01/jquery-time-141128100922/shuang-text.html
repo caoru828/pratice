@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>A date range picker for Bootstrap</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="daterangepicker-bs3.css"/>
+    <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="moment.js"></script>
+    <script type="text/javascript" src="daterangepicker.js"></script>
+    <title></title>
+</head>
+<body>
+<!--<div class="container">-->
+        <form class="form-horizontal form-inline">
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="control-group">
+                    <div class="controls">
+                        <div class="input-prepend input-group">
+                            <label>
+                                创建时间： </label>
+                                <input
+                                type="text" readonly style="width: 200px;font-size: 12px" name="reservation" id="reservation"
+                                class="form-control" value="创建时间"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="control-group">
+                    <div class="controls">
+                        <div class="input-prepend input-group">
+                            <label>
+                                发送时间：  </label>
+                            <input
+                                    type="text" readonly style="width: 200px;font-size: 12px" name="reservation" id="reservation2"
+                                    class="form-control" value="发送时间"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#reservation').daterangepicker(null, function (start, end, label) {
+                    console.log(start.toISOString(), end.toISOString(), label);
+                });
+            });
+            $(document).ready(function () {
+                $('#reservation2').daterangepicker(null, function (start, end, label) {
+                    console.log(start.toISOString(), end.toISOString(), label);
+                });
+            });
+        </script>
+</div>
+</body>
+</html>

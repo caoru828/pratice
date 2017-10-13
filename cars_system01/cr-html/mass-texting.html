@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>短信群发</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+<!-- mass-texting.html销售管理的短信群发（第一个）；当点新增短信群发时，跳到mass-texting-child.html ；引入双日历，必须把boostrap-reset.css在项目中删掉，要不会影响双日历的效果-->
+    <!-- shuangr-->
+    <link rel="stylesheet" type="text/css" media="all" href="../jquery-time-141128100922/daterangepicker-bs3.css"/>
+    <link rel="stylesheet" href="../css/caoru-massege-css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/caoru-massege-css/mass-texting.css"/>
+    <link href="../jquery-time-141128100922/font-awesome.min.css" rel="stylesheet">
+
+    <!--common-->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../jquery-time-141128100922/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../jquery-time-141128100922/moment.js"></script>
+    <script type="text/javascript" src="../jquery-time-141128100922/daterangepicker.js"></script>
+    <!-- shuaung-->
+    <!--<script src="../js/jquery-1.12.4.js"></script>-->
+    <!--<script src="../js/cr-message-js/message.js"></script>-->
+    <!--<link href="jquery-time-141128100922/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link href="jquery-time-141128100922/font-awesome.min.css" rel="stylesheet">-->
+    <!--<link rel="stylesheet" type="text/css" media="all" href="jquery-time-141128100922/daterangepicker-bs3.css"/>-->
+    <!--<script type="text/javascript" src="jquery-time-141128100922/jquery-1.8.3.min.js"></script>-->
+    <!--<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
+    <!--<script type="text/javascript" src="jquery-time-141128100922/moment.js"></script>-->
+    <!--<script type="text/javascript" src="jquery-time-141128100922/daterangepicker.js"></script>-->
+
+    <style>
+        .calendar_group{
+            height: 50px;
+            width: 270px;
+            position:relative;
+        }
+        #reservation{
+            position: absolute;
+            right: 0;
+            top: -7px;
+        }
+        #reservation2{
+            position: absolute;
+            right: 0;
+            top: -7px;
+        }
+        .calendar_group_label{
+            position: absolute;
+            left: 0;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div id="logo"></div>
+    <div id="nav">
+        <ul>
+
+            <li>guangshen（系统管理员）</li>
+            <li><a href="../massege_system/system_message_.html" style="color: black">系统消息</a></li>
+            <li>使用教程</li>
+            <li class="seleted">app下载</li>
+
+        </ul>
+    </div>
+</header>
+<contion>
+    <div class="left-side-inner">
+
+        <ul class="nav nav-pills nav-stacked custom-nav">
+            <li class="menu-list"><a href=""><i class="fa fa-laptop"></i> <span>客户管理</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href=""> 新增报价</a></li>
+                    <li><a href="">客户列表</a></li>
+                    <li><a href=""> 批量续保</a></li>
+                    <li><a href="">预约单列表</a></li>
+                    <li><a href="">已出保单</a></li>
+                    <li><a href="">战败列表</a></li>
+                    <li><a href="">回收站</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-list"><a href=""><i class="fa fa-book"></i> <span>业务员管理</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">业务员列表</a></li>
+                    <li><a href="">业务员注册</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-list"><a href=""><i class="fa fa-cogs"></i> <span>财务管理</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">台账录入</a></li>
+                    <li><a href="">台账列表</a></li>
+
+
+                </ul>
+            </li>
+
+            <li class="menu-list"><a href=""><i class="fa fa-envelope"></i> <span>销售管理</span></a>
+                <ul class="sub-menu-list" style="display: block">
+                    <li><a href="#" class="active">短信群发</a></li>
+                    <li><a href="message-report.html">短信发送记录</a></li>
+                    <li><a href="message-report.html">短信充值</a></li>
+                    <li><a href="sale-activity.html">营销活动</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-list"><a href=""><i class="fa fa-tasks"></i> <span>统计模块</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">业务统计</a></li>
+                    <li><a href="">战败分析</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-list"><a href=""><i class="fa fa-bar-chart-o"></i> <span>呼叫模块</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">呼叫统计</a></li>
+                    <li><a href="">通话记录</a></li>
+                </ul>
+            </li>
+            <li class="menu-list"><a href="#"><i class="fa fa-th-list"></i> <span>系统设置</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">分配设置</a></li>
+                    <li><a href="">战败原因设置</a></li>
+                    <li><a href="">客户类别设置</a></li>
+                    <li><a href="">报价渠道</a></li>
+                    <li><a href="">权限管理</a></li>
+                </ul>
+            </li>
+
+        </ul>
+        <!--sidebar nav end-->
+    </div>
+    <div class="message-container">
+        <div class="container">
+            <!-- 短信群发开始-->
+            <div class="message-first-page">
+                <div class="row message-input-time">
+                    <form class="form-horizontal form-inline">
+                        <div class="col-md-5 col-sm-12 col-xs-12 marginB10">
+                            <div class="control-group">
+                                <div class="controls">
+                                    <div class="input-prepend input-group calendar_group">
+                                        <label class="calendar_group_label">
+                                            创建时间： </label>
+                                        <input
+                                                type="text" readonly style="width: 200px;font-size: 12px" name="reservation"
+                                                id="reservation"
+                                                class="form-control" value="创建时间"/>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 col-sm-12 col-xs-12 marginB10">
+                            <div class="control-group">
+                                <div class="controls">
+                                    <div class="input-prepend input-group calendar_group">
+                                        <label class="calendar_group_label">
+                                            发送时间： </label>
+                                        <input
+                                                type="text" readonly style="width: 200px;font-size: 12px" name="reservation"
+                                                id="reservation2"
+                                                class="form-control" value="发送时间"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8 row-2">
+                        <span class="message-number-header"> 可用短信数量：</span>
+                        <span class="message-number"> 31条</span>
+                        <div class="message-btn">
+                            <button class="btn btn-danger">搜索</button>
+                            <button class="btn btn-primary addMessageBtn"><a href="mass-texting-child.html" style="color: white">新增短信群发</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row-3  table-responsive col-md-11">
+                        <table class="table table-bordered text-center">
+                            <thead>
+                            <tr class="table-tr-head">
+                                <td>创建时间</td>
+                                <td class="table-message-content">短信内容</td>
+                                <td>客户总量</td>
+                                <td>发送状态</td>
+                                <td>已发送</td>
+                                <td>待发送</td>
+                                <td>发送失败</td>
+                                <td>发送时间
+                                    <div class="caret-label">
+                                        <i class="caret caret-top"></i>
+                                        <i class="caret caret-bottom"></i>
+                                    </div>
+
+                                </td>
+                                <td>详情</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td colspan="9">暂无数据</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- 短信群发结束-->
+<!--点击筛选a开始-->
+
+<!--点击筛选a结束-->
+<!--弹出层开始-->
+
+            <!-- 弹出层结束-->
+         </div>
+    </div>
+</contion>
+
+    <script type="text/javascript">
+            $(document).ready(function () {
+                $('#reservation').daterangepicker(null, function (start, end, label) {
+                    console.log(start.toISOString(), end.toISOString(), label);
+                });
+            });
+    $(document).ready(function () {
+        $('#reservation2').daterangepicker(null, function (start, end, label) {
+            console.log(start.toISOString(), end.toISOString(), label);
+        });
+    });
+</script>
+</body>
+</html>

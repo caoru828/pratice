@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>mass-texting</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+
+    <!--<link rel="stylesheet" type="text/css" media="all" href="../jquery-time-141128100922/daterangepicker-bs3.css"/>-->
+    <link rel="stylesheet" href="../css/caoru-massege-css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/caoru-massege-css/mass-texting.css"/>
+
+
+    <!--common-->
+    <link href="../css/style.css" rel="stylesheet">
+<!--单日历开始-->
+    <link href="../jquery-time-141128100922/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../jquery-time-141128100922/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" media="all" href="../jquery-time-141128100922/daterangepicker-bs3.css" />
+
+    <script type="text/javascript" src="../jquery-time-141128100922/jquery-1.8.3.min.js"></script>
+
+
+    <script type="text/javascript" src="../jquery-time-141128100922/moment.js"></script>
+
+    <script type="text/javascript" src="../jquery-time-141128100922/daterangepicker.js"></script>
+    <!-- 单日历的结束-->
+
+<!--js双-->
+    <!--<script type="text/javascript" src="../jquery-time-141128100922/jquery-1.8.3.min.js"></script>-->
+    <!--<script type="text/javascript" src="../jquery-time-141128100922/moment.js"></script>-->
+    <!--<script type="text/javascript" src="../jquery-time-141128100922/daterangepicker.js"></script>-->
+<!-- 双日历的js-->
+
+    <script src="../js/bootstrap.min.js"></script>
+
+
+    <style>
+        .message-first_second-page{
+            height: 100%;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+
+        .modal-header{
+            padding: 0 0 0 12px;
+            background: #ffffff;
+        }
+        .modal-header h4{
+            color: black;
+        }
+        .closeIT{
+            margin: 0 12px 0 0;
+            display: inline-block;
+            color: grey;
+        }
+        .window-input{
+            margin-right: 45px;
+            margin-bottom: 10px;
+            width: 190px;
+            display: inline-block;
+        }
+        .row{
+            margin-left: 5px;
+        }
+        .marginL110{
+            margin-left: 110px;
+        }
+        .btn-width56{
+            width: 82px;
+        }
+        .modal-dialog{
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div id="logo"></div>
+    <div id="nav">
+        <ul>
+
+            <li>guangshen（系统管理员）</li>
+            <li><a href="../massege_system/system_message_.html" style="color: black">系统消息</a></li>
+            <li>使用教程</li>
+            <li class="seleted">app下载</li>
+
+        </ul>
+    </div>
+</header>
+<contion>
+    <div class="left-side-inner">
+
+        <ul class="nav nav-pills nav-stacked custom-nav">
+            <li class="menu-list"><a href=""><i class="fa fa-laptop"></i> <span>客户管理</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href=""> 新增报价</a></li>
+                    <li><a href="">客户列表</a></li>
+                    <li><a href=""> 批量续保</a></li>
+                    <li><a href="">预约单列表</a></li>
+                    <li><a href="">已出保单</a></li>
+                    <li><a href="">战败列表</a></li>
+                    <li><a href="">回收站</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-list"><a href=""><i class="fa fa-book"></i> <span>业务员管理</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">业务员列表</a></li>
+                    <li><a href="">业务员注册</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-list"><a href=""><i class="fa fa-cogs"></i> <span>财务管理</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">台账录入</a></li>
+                    <li><a href="">台账列表</a></li>
+
+
+                </ul>
+            </li>
+
+            <li class="menu-list"><a href=""><i class="fa fa-envelope"></i> <span>销售管理</span></a>
+                <ul class="sub-menu-list" style="display: block">
+                    <li><a href="#" class="active">短信群发</a></li>
+                    <li><a href="message-report.html">短信发送记录</a></li>
+                    <li><a href="message-report.html">短信充值</a></li>
+                    <li><a href="sale-activity.html">营销活动</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-list"><a href=""><i class="fa fa-tasks"></i> <span>统计模块</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">业务统计</a></li>
+                    <li><a href="">战败分析</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-list"><a href=""><i class="fa fa-bar-chart-o"></i> <span>呼叫模块</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">呼叫统计</a></li>
+                    <li><a href="">通话记录</a></li>
+                </ul>
+            </li>
+            <li class="menu-list"><a href="#"><i class="fa fa-th-list"></i> <span>系统设置</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">分配设置</a></li>
+                    <li><a href="">战败原因设置</a></li>
+                    <li><a href="">客户类别设置</a></li>
+                    <li><a href="">报价渠道</a></li>
+                    <li><a href="">权限管理</a></li>
+                </ul>
+            </li>
+
+        </ul>
+        <!--sidebar nav end-->
+    </div>
+    <div class="message-container">
+        <div class="container">
+            <!-- 短信群发开始-->
+            <div class="message-first_second-page">
+                <!-- 短信群发结束-->
+                <!--点击筛选a开始-->
+                <div id="message-add-message">
+                    <div class="col-md-11">
+                        <div class="panel panel-default  border-none border-radius-0 boxShadowNone">
+                            <div class="panel-heading border-none border-radius-0 boxShadowNone">
+                                <a href="" class="customer cBlack">目标客户</a>
+                                <div class="float-right">
+                                    <span class="marginR30">共有0位客户 </span>
+                                    <span class="paddingR15 font-normal"><a href="" data-toggle="modal" data-target="#myModal">从用户列表筛选</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <p>支持手动录入，一条手机号为一行，多条需换行</p>
+                        <div class="textGroup">
+                        <textarea name="phones" id="Tel" cols="30" rows="6" class="text-outline">
+输入示例：
+18846466666
+18846477777
+                        </textarea>
+                        <div class="row  textarea-operation">
+                            <button class="btn btn-primary">去重</button>
+                            <button class="btn btn-primary">清空</button>
+                        </div>
+                        </div>
+                        <div class="message-direction">
+                            <div class="panel panel-default  border-none border-radius-0 boxShadowNone">
+                                <div class="panel-heading border-none border-radius-0 boxShadowNone">
+                                    <a href="" class="customer cBlack">短信内容</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notice-info">
+                            <textarea name="" id="" cols="30" rows="6" class="text-outline" placeholder="示例：尊敬的车主，您的车险即将到期."></textarea>
+                        </div>
+                        <br/>
+                        <p class="marginB20">注：每70个字为一条短信，最大字数不可超过150字.</p>
+                        <div class="panel panel-default  border-none border-radius-0 boxShadowNone">
+                            <div class="panel-heading border-none border-radius-0 boxShadowNone">
+                                <a href="" class="customer cBlack">发送时间</a>
+                            </div>
+                        </div>
+
+                      <!-- 单日历开始-->
+                        <form class="form-horizontal">
+
+
+
+                            <div class="input-prepend input-group">
+
+                                <input type="text" readonly style="width: 200px" name="birthday" id="birthday" class="form-control" value="03/18/2013" />
+
+                            </div>
+
+
+                        </form>
+                        <!-- 单日历结束-->
+                        <div class="message-send">
+                            <button class="btn btn-primary">发送</button>
+                        </div>
+                    </div>
+                </div>
+                <!--点击筛选a结束-->
+                <!--弹出层开始-->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal"><span class="closeIT">&times;</span></button>
+                                <h4>选择客户</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <form action="">
+                                        <div class="row">
+                                            <input type="text" class="form-control window-input" placeholder="商业保险到期时间"/>
+                                            <input type="text" class="form-control window-input" placeholder="交强险到期时间"/>
+                                        </div>
+                                        <div class="row">
+                                            <input type="text" class="form-control window-input" placeholder="注册时间"/>
+                                            <button class="btn btn-danger marginL110 btn-width56">搜索</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary text-right btn-width56">确定</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 弹出层结束-->
+
+            </div>
+
+        </div>
+    </div>
+</contion>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        $('#birthday').daterangepicker({ singleDatePicker: true }, function(start, end, label) {
+
+            console.log(start.toISOString(), end.toISOString(), label);
+
+        });
+
+        var telTextarea = $("#Tel");
+        $(".addMessageBtn").on("click", function () {
+            $(".message-first-page").css("display", "none");
+            $("#message-add-message").css("display", "block");
+        });
+        telTextarea.focusin(function () {
+            telTextarea.empty();
+            telTextarea.css("color", "black");
+        });
+        telTextarea.focusout(function () {
+            console.log(this);
+            telTextarea.css({
+                color: "#c1bbc3",
+                fontSize: "11px"
+            });
+            telTextarea.html("输入示例：\n" + "18846466666\n" + "18846477777\n");
+        });
+
+    });
+
+</script>
+</body>
+</html>

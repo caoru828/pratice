@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>mass-texting</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+    <meta name="description" content="">
+    <meta name="author" content="ThemeBucket">
+
+
+
+    <!--common-->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/caoru-massege-css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/caoru-massege-css/mass-texting.css"/>
+
+    <!--<link href="jquery-time-141128100922/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link href="jquery-time-141128100922/font-awesome.min.css" rel="stylesheet">-->
+    <!--<link rel="stylesheet" type="text/css" media="all" href="jquery-time-141128100922/daterangepicker-bs3.css"/>-->
+    <!--<script type="text/javascript" src="jquery-time-141128100922/jquery-1.8.3.min.js"></script>-->
+    <!--<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
+    <!--<script type="text/javascript" src="jquery-time-141128100922/moment.js"></script>-->
+    <!--<script type="text/javascript" src="jquery-time-141128100922/daterangepicker.js"></script>-->
+    <style>
+        .width100{
+            width: 100%;
+        }
+        .panel-body{
+            padding: 0;
+            line-height: 45px;;
+        }
+        .panel-body p{
+            padding-left: 19px;
+            height: 45px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 0;
+            color: #393939;
+        }
+        .panel-body p a span{
+            color: #393939;
+        }
+        .panel-body p a:hover{
+            text-decoration: none;
+        }
+        .panel-body p:hover{
+            background: #f5f5f5;
+        }
+        .information{
+            display: inline-block;
+            font-size: 21px;
+        }
+        .all-read{
+            display: inline-block;
+            font-size: 21px;
+        }
+        .all-read:hover{
+            text-decoration: none;
+        }
+        .time{
+            float: right;
+            margin-right: 25px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div id="logo"></div>
+    <div id="nav">
+        <ul>
+
+            <li>guangshen（系统管理员）</li>
+            <li><a href="system_message_.html">系统消息</a></li>
+            <li>使用教程</li>
+            <li class="seleted">app下载</li>
+
+        </ul>
+    </div>
+</header>
+<contion>
+    <div class="left-side-inner">
+
+        <ul class="nav nav-pills nav-stacked custom-nav">
+            <li class="menu-list"><a href=""><i class="fa fa-laptop"></i> <span>客户管理</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href=""> 新增报价</a></li>
+                    <li><a href="">客户列表</a></li>
+                    <li><a href=""> 批量续保</a></li>
+                    <li><a href="">预约单列表</a></li>
+                    <li><a href="">已出保单</a></li>
+                    <li><a href="">战败列表</a></li>
+                    <li><a href="">回收站</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-list"><a href=""><i class="fa fa-book"></i> <span>业务员管理</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">业务员列表</a></li>
+                    <li><a href="">业务员注册</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-list"><a href=""><i class="fa fa-cogs"></i> <span>财务管理</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">台账录入</a></li>
+                    <li><a href="">台账列表</a></li>
+
+
+                </ul>
+            </li>
+
+            <li class="menu-list"><a href=""><i class="fa fa-envelope"></i> <span>销售管理</span></a>
+                <ul class="sub-menu-list" style="display: block">
+                    <li><a href="#" class="active">短信群发</a></li>
+                    <li><a href="../cr-html/message-report.html">短信发送记录</a></li>
+                    <li><a href="../cr-html/message-report.html">短信充值</a></li>
+                    <li><a href="../cr-html/sale-activity.html">营销活动</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-list"><a href=""><i class="fa fa-tasks"></i> <span>统计模块</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">业务统计</a></li>
+                    <li><a href="">战败分析</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-list"><a href=""><i class="fa fa-bar-chart-o"></i> <span>呼叫模块</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">呼叫统计</a></li>
+                    <li><a href="">通话记录</a></li>
+                </ul>
+            </li>
+            <li class="menu-list"><a href="#"><i class="fa fa-th-list"></i> <span>系统设置</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="">分配设置</a></li>
+                    <li><a href="">战败原因设置</a></li>
+                    <li><a href="">客户类别设置</a></li>
+                    <li><a href="">报价渠道</a></li>
+                    <li><a href="">权限管理</a></li>
+                </ul>
+            </li>
+
+        </ul>
+        <!--sidebar nav end-->
+    </div>
+    <div class="message-container">
+        <div class="container">
+            <div class="info">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <!-- panel-title比较兼容，符合整个格局，大小样式-->
+                        <h2 class="panel-title information">消息</h2>
+                        <a href="" class="all-read">全部标为已读</a>
+                    </div>
+                    <div class="panel-body">
+
+
+                                <p class="width100"><a href="10yi.html">
+                                    <span class="">国庆放假通知</span>
+                                    <span class="time">2017-09-30</span>
+                                </a>
+
+                                </p>
+                                <p class="width100">
+                                    <a href="uadate_notice.html">
+                                        <span>【升级公告</span>
+                                        <span class="time">2017-09-30</span>
+                                    </a>
+                                </p>
+                                <p class="width100">
+                                    <a href="two_ways.html">
+                                        <span>车型校验支持车架号和品牌型号两种方式</span>
+                                        <span class="time">2017-09-30</span>
+                                    </a>
+                                </p>
+                                <p class="width100">
+                                    <a href="">
+                                        <span>【升级公告】批量续保支持直接填写业务员姓名</span>
+                                        <span class="time">2017-09-30</span>
+                                    </a>
+
+                                </p>
+                                <p class="width100">
+                                    <a href="">
+                                        <span>【升级公告】台账1.3版本更新通知</span>
+                                        <span class="time">2017-09-30</span>
+                                    </a>
+
+                                </p>
+                                <p class="width100">
+                                    <a href="">
+                                        <span>【升级公告】2017/8/17日更新提醒</span>
+                                        <span class="time">2017-09-30</span>
+                                    </a>
+                                </p>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</contion>
+
+
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/modernizr.min.js"></script>
+<script src="../js/jquery.nicescroll.js"></script>
+<script src="../js/scripts.js"></script>
+<script src="../js/cr-message-js/jquery-1.12.4.js"></script>
+<script src="../js/cr-message-js/message.js"></script>
+
+<script>
+
+</script>
+</body>
+</html>
