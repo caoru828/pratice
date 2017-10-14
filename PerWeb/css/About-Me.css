@@ -1,0 +1,169 @@
+
+#About-ME{
+    width: 100%;
+    height: 660px;
+}
+.wrapper{
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+}
+#ME-title{
+    text-align: center;
+    width: 100%;
+    height: 144px;
+    padding-top: 100px;
+}
+/*.StoryBorder{*/
+    /*width: 403px;*/
+    /*height: 0;*/
+    /*/!*#1692a7*!/*/
+    /*border: 1px solid #FFFFFF;*/
+    /*background: #FFFFFF;*/
+    /*display: inline-block;*/
+/*}*/
+#ME-title h2{
+    border: 0 solid #1692a7;
+    z-index: 999;
+    font-size: 38px;
+    height: 80px;
+    margin: 10px auto;
+    padding-top: 24px;
+    color: #000000;
+    font-weight: 500;
+    width: 401px;
+    display: inline-block;
+}
+#ME-title h2 span{
+    color: #1692a7;
+    font-weight: bold;
+}
+.small-title{
+    font-size: 28px;
+    font-weight: 400;
+    /*color: #8f5f59;*/
+    color: black;
+    border-bottom: solid 1px #006dcc;
+    margin-bottom: 50px;
+}
+.s-title-span{
+    font-weight: bold;
+}
+#Me-direction{
+    width: 60%;
+   position: relative;
+}
+#Me-direction p{
+    line-height: 30px;
+}
+#Me-direction,#Me-pic{
+
+    float: left;
+}
+#Me-direction .dir-detail{
+    color: #655a55;
+    width: 100%;
+    margin-bottom: 9px;
+}
+#Me-pic{
+    width: 40%;
+}
+
+#container {
+    width: 300px;
+    height: 300px;
+    margin: 100px ;
+    position: absolute;
+    right: 0;
+}
+
+#img img {
+    width: 300px;
+    height: 300px;
+    display: none;
+    border-radius: 50%;
+}
+
+#img .selected {
+    display: block;
+}
+
+#nav li, #arrow div {
+    width: 10px;
+    height: 10px;
+    background:#655a55;
+    color: white;
+    text-align: center;
+    line-height: 10px;
+    float: left;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+#nav {
+    position: absolute;
+    right: 118px;
+    bottom: 10px;
+}
+
+#arrow {
+    display: none;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+#nav .selected {
+    background:#ffc107;
+}
+@media (max-width: 900px) {
+  #About-ME{
+      height: 930px;
+      position: relative;
+  }
+   #Me-direction{
+       width: 50%;
+   }
+    #container{
+        margin: 20px;
+    }
+    #header-content{
+        margin-top: 150px;
+    }
+    #header-content .My-name{
+        font-size: 40px;
+        height: 42px;
+    }
+}
+@media (max-width: 520px) {
+    #About-ME{
+        height: 1000px;
+    }
+    #Me-pic{
+        width: 100%;
+        position: absolute;
+        top: 244px;
+        margin: 0 auto;
+    }
+    #img{
+            width: 100%;
+        }
+    #container{
+    width: 100%;
+         }
+    #Me-direction{
+        position: absolute;
+        top: 600px;
+        width: 80%;
+    }
+
+    #header-content{
+        margin-top: 60px;
+    }
+    #header-content .My-name{
+        font-size: 28px;
+        height: 30px;
+    }
+}

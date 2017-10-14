@@ -1,0 +1,129 @@
+#contact-me{
+    padding: 100px 0 70px 0;
+}
+#contact-me-header{
+    width: 100%;
+    z-index: 888;
+    text-align: center;
+    margin-top: 50px;
+}
+#contact-me-header h2{
+    border: 0 solid #1692a7;
+    /*z-index: 999;*/
+    font-size: 38px;
+    height: 80px;
+    margin: 10px auto;
+    padding-top: 24px;
+    color: #000000;
+    font-weight: 500;
+    width: 401px;
+    display: inline-block;
+}
+#contact-me-header h2 span{
+    color: #1692a7;
+    font-weight: bold;
+}
+.contact-me-direction{
+    margin: 60px 0;
+
+}
+.input-group-icon{
+    background: #1391a6;
+}
+
+
+.contact-ME {
+    margin: 10px auto;
+    padding: 40px 20px 10px 20px;
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    width: 90%;
+    height: 420px;
+}
+.marginL20{
+    margin-left: 20px;
+}
+.marginT20{
+    margin-top: 10px;
+}
+.paddingB1{
+    padding-bottom: 1px;
+}
+.marginR10{
+    margin-right:10px ;
+}
+.width100{
+    width: 100px;
+}
+
+.send{
+    height: 100px;
+}
+@media (min-width: 768px){
+    .form-inline .input-group .input-group-addon{
+        width: 35px;
+    }
+}
+.bgBlue{
+    background: #1692a7;
+    border: 0;
+    color: white;
+}
+.paddingR50{
+    padding-right: 50px;
+}
+.height35{
+    height: 35px;
+}
+
+
+form div {
+    margin: 5px 0;
+}
+
+.int label {
+    float: left;
+    width: 100px;
+    text-align: right;
+}
+
+.int input {
+    padding: 1px 1px;
+    border: 1px solid #ccc;
+    height: 16px;
+}
+.sub {
+    padding-left: 100px;
+}
+
+.sub input {
+    margin-right: 10px;
+}
+
+.formtips {
+    width: 200px;
+    margin: 2px;
+    padding: 2px;
+}
+
+.onError {
+    background:  url(../img/error.png) no-repeat 0 center;
+    padding-left: 25px;
+}
+
+.onSuccess {
+    background:  url(../img/c.png) no-repeat 0 center;
+    padding-left: 25px;
+}
+
+.high {
+    color: red;
+    margin-left: 3px;
+}
+input.required{
+    height: 28px;
+}
+
+.width300{
+    width: 300px;
+}

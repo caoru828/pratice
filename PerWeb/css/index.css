@@ -1,0 +1,324 @@
+/*回到顶部箭头*/
+#arrowTop{
+    /*background:black ;*/
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 999;
+}
+/*回到顶部箭头结束*/
+/*header开始*/
+.head{
+    background: url("../img/bbg3.jpg")  0 0/cover  no-repeat ;
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+#particles-js {
+   position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 666;
+}
+
+#head-logo{
+
+    float: left;
+    height: 79px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    margin-left: 20px;
+}
+#img1{
+    width: 160px;
+}
+#img2{
+    margin-left: 20px;
+    height: 65px;
+    z-index: 999;
+    display: none;
+}
+.About-me{
+    font-size: 18px;
+    height: 79px;
+    text-align: center;
+}
+.About-me li{
+    padding: 0 15px;
+    float: right;
+    line-height: 79px;
+    height: 79px;
+    z-index: 10;
+    text-align: center;
+}
+.About-me li:hover{
+    background: #1391a6;
+    transition: all 0.5s linear;
+    /*opacity: 0.7;*/
+
+
+}
+.About-me li a{
+    text-decoration: none;
+    display: block;
+    font-weight: bolder;
+    color: white;
+    width: 76px;
+    height: 79px;
+    line-height: 79px;
+}
+
+#header-content{
+    /*width: 100%;*/
+    /*height: 679px;*/
+    padding-top: 80px;
+    margin-top: 300px;
+    height: 57px;
+    z-index: 668;
+    text-align: center;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#header-content .My-name{
+    overflow: hidden;
+    height: 60px;
+    width: 0;
+    color: #fff;
+   font-size: 56px;
+    font-weight: 500;
+
+    border-right: 3px solid white;
+}
+/*#header-nav .About-me{*/
+    /*display: none;*/
+/*}*/
+#address{
+    overflow: hidden;
+    height: 60px;
+    width: 0;
+    color: #fff;
+    font-size: 56px;
+    font-weight: 500;
+    border-right: 3px solid white;
+    display: none;
+}
+#header-nav{
+    z-index: 777;
+    width: 100%;
+    height: 79px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+#header-nav-Sicon{
+    display: none;
+    /*float: right;*/
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 79px;
+    width: 60px;
+    /*overflow: hidden;*/
+    text-align: center;
+    z-index: 888;
+
+
+}
+#s-logo-min{
+    display: inline-block;
+    margin: 20px auto;
+}
+
+
+/*header结束*/
+
+#slide-Menu.toggle{
+    height: 395px;
+    float: none;
+    z-index: 888;
+    display: none;
+    width: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#slide-Menu > li{
+    width: 200px;
+    background: #292929;
+}
+#slide-Menu a{
+    margin-left: 62px;
+}
+/*small-effect开始*/
+
+#small-effect{
+    height: 600px;
+    margin-top: -120px;
+    margin-bottom: -110px;
+
+}
+#small-effect .wrapper{
+    display: flex;
+}
+
+#effect-direction{
+    flex-grow: 1;
+    /*display: inline-block;*/
+    text-align: left;
+    /*width: 50%;*/
+    height: 144px;
+    padding-top: 100px;
+}
+#effect-title{
+    text-align: left;
+    padding-left: 50px;
+}
+#small-effect h2{
+    border: 0 solid #1692a7;
+    z-index: 999;
+    font-size: 38px;
+    height: 80px;
+    margin: 10px auto;
+    padding-top: 24px;
+    color: #000000;
+    font-weight: 500;
+    width: 401px;
+    display: inline-block;
+}
+#small-effect h2 span{
+    color: #1692a7;
+    font-weight: bold;
+}
+#small-effect p{
+    /*padding-left: 0;*/
+    color: #505050;
+    line-height: 1.6;
+    font-size: 18px;
+    margin-top: 30px;
+    padding: 20px 20px 20px 0;
+}
+
+
+#ul li {
+    list-style: none;
+    width: 2px;
+    height: 6px;
+    background: grey;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    transform-origin: 0 100px;
+}
+
+#ul li:nth-child(5n+1) {
+    height: 13px;
+}
+#effect-animate{
+    flex-grow: 1;
+
+ /*display: inline-block;*/
+}
+#watch-container {
+
+    border: 5px solid #cfcfcf;
+    box-shadow: 5px 5px 5px grey;
+    width: 200px;
+    height: 200px;
+    margin: -130px auto;
+    position: relative;
+    border-radius: 50%;
+    background: 0 0/contain url(../img/aaaaa.jpeg);
+
+}
+
+#hour {
+    width: 4px;
+    height: 40px;
+    background: #000;
+    position: absolute;
+    top: 60px;
+    left: 99px;
+}
+
+#minute {
+    width: 4px;
+    height: 60px;
+    background: #000;
+    position: absolute;
+    left: 99px;
+    top: 40px;
+}
+
+#second {
+    width: 2px;
+    height: 70px;
+    background: red;
+    position: absolute;
+    left: 100px;
+    top: 30px;
+}
+
+#watch-container div {
+    transform-origin: bottom;
+}
+
+#effect-animate{
+    margin-top: 300px;
+    text-align: center;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+/*small-effect结束*/
+@media (max-width: 950px) {
+    #header-nav>ul{
+        display: none;
+    }
+    #header-nav-Sicon{
+        display: block;
+    }
+    #slide-Menu{
+        display: block;
+    }
+}
+@media (max-width: 1000px) {
+   #contact-me{
+       margin-top: 300px;
+   }
+
+    @media (max-width: 850px) {
+   #contact-me{
+       margin-top: 600px;
+   }
+}
+    @media (max-width: 800px) {
+        #contact-me{
+            margin-top: 900px;
+        }
+    } @media (max-width: 700px) {
+        #contact-me{
+            margin-top: 1900px;
+        }
+    }
+}

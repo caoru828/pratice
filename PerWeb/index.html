@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/About-Me.css"/>
+    <link rel="stylesheet" href="css/my-honor.css"/>
+    <link rel="stylesheet" href="css/my-project.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/contact-me.css"/>
+    <link rel="stylesheet" href="js/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/mass-texting.css">
+
+    <title>Personnal-Web</title>
+    <style>
+        .contact-ME {
+            margin: 10px auto;
+            padding: 40px 20px 10px 20px;
+            border: 1px solid #e4e4e4;
+            border-radius: 4px;
+            width: 90%;
+            height: 420px;
+        }
+
+        .marginL20 {
+            margin-left: 20px;
+        }
+
+        .marginT20 {
+            margin-top: 10px;
+        }
+
+        .paddingB1 {
+            padding-bottom: 1px;
+        }
+
+        .marginR10 {
+            margin-right: 10px;
+        }
+
+        .width100 {
+            width: 100px;
+        }
+
+        .send {
+            height: 100px;
+        }
+
+        @media (min-width: 768px) {
+            .form-inline .input-group .input-group-addon {
+                width: 35px;
+            }
+        }
+
+        .bgBlue {
+            background: #1692a7;
+            border: 0;
+            color: white;
+        }
+
+        .paddingR50 {
+            padding-right: 50px;
+        }
+
+        .height35 {
+            height: 35px;
+        }
+
+        form div {
+            margin: 5px 0;
+        }
+
+        .int label {
+            float: left;
+            width: 100px;
+            text-align: right;
+        }
+
+        .int input {
+            padding: 1px 1px;
+            border: 1px solid #ccc;
+            height: 16px;
+        }
+
+        .sub {
+            padding-left: 100px;
+        }
+
+        .sub input {
+            margin-right: 10px;
+        }
+
+        .formtips {
+            width: 200px;
+            margin: 2px;
+            padding: 2px;
+        }
+
+        .onError {
+            background: url(img/error.png) no-repeat 0 center;
+            padding-left: 25px;
+        }
+
+        .onSuccess {
+            background: url(img/c.png) no-repeat 0 center;
+            padding-left: 25px;
+        }
+
+        .high {
+            color: red;
+            margin-left: 3px;
+        }
+
+        input.required {
+            height: 28px;
+        }
+
+        .width300 {
+            width: 300px;
+        }
+
+        .modal-header .close {
+            color: grey;
+        }
+
+        .modal-header {
+            padding: 14px;
+            color: black;
+            border-radius: 6px 0 0 0;
+        }
+
+        .modal-content {
+            border-radius: 6px 6px 0;
+        }
+
+        .modal-left {
+            background-color: transparent;
+            overflow-y: visible;
+            overflow-x: visible;
+            border-radius: 6px;
+            z-index: 89991;
+        }
+
+        .modal-dialog-right {
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        }
+
+        .modal-right-arrow {
+            height: 16px;
+            position: relative;
+            top: -2px;
+            left: -1px;
+        }
+
+        .rightArr-modal-header {
+            height: 49px;
+        }
+
+        .modal-massage-content {
+            font-size: 18px;
+        }
+
+        .marginB80 {
+            margin-bottom: 80px;
+        }
+
+        /*Sjoujichongzhu*/
+        #honor-title1 {
+            position: relative;
+        }
+
+        h3.small-title::before {
+            content: "";
+            background: #1391a6;
+            width: 60px;
+            height: 4px;
+            display: block;
+            position: absolute;
+            top: 29px;
+        }
+
+        #honor-title2 {
+            position: relative;
+        }
+
+        h3.small-title::before {
+            content: "";
+            background: #1391a6;
+            width: 60px;
+            height: 4px;
+            display: block;
+            position: absolute;
+            top: 29px;
+        }
+        .arrLeft{
+            position: fixed;
+            left: -138px;
+            top: 300px;
+            z-index: 999;
+            /*transform-origin:1% 1%;*/
+            transform: rotate(90deg);
+        }
+
+        /**/
+    </style>
+</head>
+<body>
+<div id="arrowTop">
+    <img src="img/arrow.png" alt=""/>
+</div>
+<div class="arrLeft">
+    <img src="img/music.png" alt="" style="position: relative;left: 4px;top: -16px;"/>
+    <audio src="DelaceyDreamItPossible.mp3" autoplay controls></audio>
+</div>
+
+
+
+<header class="head">
+    <div id="particles-js">
+        <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;">
+        </canvas>
+    </div>
+    <div id="head-logo">
+
+        <img src="img/logo-white.png" alt="" id="img1"/>
+        <img src="img/logo.png" alt="" id="img2"/>
+    </div>
+    <!-- 响应式的菜单栏-->
+    <ul class="toggle  About-me" id="slide-Menu">
+        <li><a href="" class="a-color">我的资料</a></li>
+        <li><a href="" class="a-color">我的项目</a></li>
+        <li><a href="" class="a-color">我的荣誉</a></li>
+        <li><a href="" class="a-color">小游戏</a></li>
+        <li><a href="" class="a-color">联系我</a></li>
+    </ul>
+    <div id="header-content">
+        <span class="My-name">
+            I AM CAO RU!
+        </span>
+
+
+    </div>
+    <div id="header-nav">
+        <!--<div class="menu"></div>-->
+        <ul class="menu About-me">
+            <li><a href="">联系我</a></li>
+            <li><a href="">小游戏</a></li>
+            <li><a href="">我的项目</a></li>
+            <li><a href="">我的荣誉</a></li>
+            <li><a href="">我的资料</a></li>
+        </ul>
+
+
+    </div>
+    <div id="header-nav-Sicon">
+        <img src="img/menu-press.png" alt="" id="s-logo-min"/>
+    </div>
+
+</header>
+
+<section id="About-ME">
+    <div class="wrapper">
+        <div id="ME-title">
+            <!--<div class="StoryBorder">-->
+            <h2>MY <span>STORY</span></h2>
+            <!--</div>-->
+        </div>
+        <div id="Me-pic">
+            <div id="container">
+                <div id="img">
+                    <img src="img/me1.jpg" alt="" class="selected"/>
+                    <img src="img/me2.jpg" alt=""/>
+                    <img src="img/me3.jpg" alt=""/>
+                    <img src="img/me4.jpeg" alt=""/>
+                </div>
+                <div id="nav">
+                    <ul>
+                        <li class="selected"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div id="arrow">
+                    <div id="left">&lt;</div>
+                    <div id="right">&gt;</div>
+                </div>
+            </div>
+        </div>
+        <div id="Me-direction">
+            <h3 class="small-title">About <span class="s-title-span">Me</span></h3>
+
+            <div class="dir-detail">性别：女</div>
+            <div class="dir-detail">姓名：曹茹</div>
+            <div class="dir-detail">民族：汉族</div>
+            <div class="dir-detail">血型：AB型</div>
+            <div class="dir-detail">星座：天秤座</div>
+            <div class="dir-detail">qq：1461719319</div>
+            <div class="dir-detail">Tel:18846432589</div>
+            <div class="dir-detail">出生年月：1996年2月21日</div>
+            <div class="dir-detail">E-mail:18846432589@163.com</div>
+            <div class="dir-detail">地址：黑龙省七台河市茄子河区新东方家园</div>
+            <p class="dir-detail"> 个人简介：来自黑龙江大学计算机科学与技术专业的2015级的学生。性格活泼开朗，勤劳可爱,热爱前端，一直坚信阳光总在风雨后。我的人生格言是：Where there is
+                will,there is a way!有志者事竟成！</p>
+        </div>
+
+    </div>
+
+</section>
+
+<div id="my-honor">
+    <div class="wrapper">
+        <div id="honor-title">
+            <h3 class="small-title">My<span class="s-title-span"> honor</span></h3>
+        </div>
+        <div id="all-honor-content">
+            <div class="honor-content">
+                <h3>2015-2016学年</h3>
+                <h4>本科一年级</h4>
+
+                <div> 2015年被黑龙江大学计算机科学与技术专业录取。开学时被选为为宣委员，经过一年的努力，没有任何挂科违纪行为，并获得了黑龙江大学二等奖学金。在学校举办的英语大咖秀中，由我组织的小组获得了三等奖。
+                </div>
+            </div>
+            <div class="honor-content">
+                <h3>2016-2017学年</h3>
+                <h4>本科二年级</h4>
+
+                <div> 经过我的不懈努力，没有任何挂科违纪行为，再次获得黑龙江大学综合奖学金，同时获得贫困生奖学金，并被评为优秀团干部。在这一学年，我又参加了学校组织的数据结构大赛，我所在团队获得三等奖。</div>
+            </div>
+            <div class="honor-content">
+                <h3>2017-2018学年</h3>
+                <h4>本科三年级</h4>
+
+                <div> 如今大三学年刚刚开始，我依然会不懈努力，朝着自己的目标不断前进，热爱前端的我会更加刻苦，争取获得更多的荣誉。在这一学年，我又参加了学校组织的数据结构大赛，我所在团队获得三等奖。</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--交话费-->
+<div class="message-container">
+    <div class="container" style="width: 100%;">
+        <div class="wrapper">
+            <div id="honor-title1">
+                <h3 class="small-title">Your<span class="s-title-span"> pay</span></h3>
+            </div>
+            <div class="massage-recharge-first">
+
+                <div class="massage-recharge-wrapper">
+
+
+                    <div class="message-pay-detail">
+
+
+                        <div class="input-group marginT20">
+                            <div class="input-group-addon" style="background:#1692a7;color:#ffffff;border: 0">手机充值</div>
+                            <input type="text" class="form-control" placeholder="请输入手机号码:" style=" width: 30%;"/>
+                        </div>
+                        <!--<span>手机充值</span>-->
+                        <!--<input type="text" placeholder="请输入手机号码:" style="border-radius: 6px">-->
+                        <!--&lt;!&ndash;<span class="message-number">31</span>&ndash;&gt;-->
+
+
+                        <p class="message-pay-number paddingB10 marginB20"></p>
+
+                        <div class="message-pay-money">
+                            <ul class="PaddingR100 now-money-ul">
+                                <li><span class="now-money-now">5</span>元(5元)</li>
+                                <li><span class="now-money-now">9.99</span>元(10元）</li>
+                                <li><span class="now-money-now ">19.98</span>元(20元）</li>
+                                <li><span class="now-money-now ">29.94</span>元(30元）</li>
+                                <li><span class="now-money-now ">48.88</span>元（50元）</li>
+                                <li><span class="now-money-now ">97.77</span>元(100元）</li>
+                                <li style="color: red;font-weight: 500" data-toggle="modal"
+                                    data-target="#myModal_content" data-backdrop="false"><span class="now-money-now ">500</span>元(限时免费送）
+                                </li>
+                                <li>自定义充值</li>
+                            </ul>
+                        </div>
+                        <div class="myself-decide">
+                            <input type="text" placeholder="输入充值金额，如：100" class="myself-decide-input"/>
+                            <span style="color: red;font-weight: 500">自定义限时9折!!!</span>
+                        </div>
+                        <p class="message-pay-number paddingB10 marginB40">
+                            充值金额:
+                            <span class="message-number">￥ <span id="now-money">5</span><span class="tail-zero"></span></span>
+                        </p>
+
+                        <div class="message-pay-ways marginB40">
+                            支付方式：<a href=""><img src="img/resizeApi.png" alt="支付宝" class="apply-bao"/></a>
+                        </div>
+
+                        <button class="message-pay-btn">
+                            立即支付
+                        </button>
+                    </div>
+
+                    <div></div>
+                </div>
+                <div class="modal fade  modal-left" id="myModal_content" tabindex="-1">
+                    <!-- 窗口声明-->
+                    <!--<div class="modal-dialog modal-sm">-->
+                    <!--<div class="modal-dialog modal-lg">-->
+                    <div class="modal-dialog  modal-dialog-right">
+                        <!-- 内容声明-->
+                        <div class="modal-content">
+                            <div class="modal-header rightArr-modal-header">
+                                <!-- close显示正常好看的关闭按钮，data-dismiss="modal"点击能关闭，调用js部分，实现关闭效果,
+                                现在关闭不了，因为这个模态框默认显示状态，只有开始模态框隐藏，后来点开了，在按关闭才好使-->
+                                <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                                <!-- modal-title上下间距去掉-->
+                                <!--<img src="img/resizeApi.png" alt="" class="modal-right-arrow" data-dismiss="modal"/>-->
+
+                                <span class="modal-title modal-massage-content">傻了吧！！！</span>
+
+                            </div>
+                            <div class="modal-body marginB80">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <!-- panel-title比较兼容，符合整个格局，大小样式-->
+                                        <h2 class="panel-title">～～～哈哈哈～～～</h2>
+                                    </div>
+                                    <div class="panel-body">
+                                        臭不要脸，都成了你家的了！！！
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--假化肥-->
+<div class="vedio">
+    <div class="wrapper text-center marginT40">
+        <video src="animate.mov"  loop width="70%"  controls class="marginT20 marginB80"></video>
+    </div>
+</div>
+
+
+<div id="small-effect">
+    <div class="wrapper">
+        <div id="effect-direction">
+            <div id="effect-title">
+                <h2 class="center-block">Small<span> Watch</span></h2>
+
+                <p>这是一块调皮的小钟表，鼠标划入有可爱的效果哦~不信你就试试呗！</p>
+            </div>
+        </div>
+        <div id="effect-animate">
+            <div id="watch-container">
+                <ul id="ul">
+                </ul>
+                <div id="hour"></div>
+                <div id="minute"></div>
+                <div id="second"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="my-project">
+    <div class="wrapper pro-center">
+        <div id="project-title">
+            <h2 class="center-block">My<span> Project</span></h2>
+        </div>
+        <p class="project-content">这是我做的一些小项目，有旋转的照片墙，我的商店，一些小广告，未完待续...</p>
+
+        <div class="project-classify">
+            <div class="project-detail">
+                <h3>旋转的照片墙</h3>
+
+                <p>
+                    照片墙：使用事件冒泡给包裹在外的container添加事件，通过target判断当前对象，图片采用预加载方式进行加载，用js和css3相结合实现效果，用到了css3的transform的rotate，同时利用css3中的transition实现动画效果。用定时器通过随机函数随机设置span背景图片实现马赛克。</p>
+                <a href="pictures-wall/index.html" id="project-one">点我看看吧</a>
+            </div>
+            <div class="project-detail">
+                <h3>旋转立方体</h3>
+
+                <p> 利用css3的效果，只用css3实现两个立方体旋转，一个正向一个反向</p>
+                <a href="rotate-cube/index.html" id="project-two">点我看看吧</a>
+            </div>
+            <div class="project-detail">
+                <h3>旋转木马</h3>
+
+                <p> 利用css3的语法，实现多个照片的展开，延筒行一次展开，点击每一张图片整体像旋转木马一样转动一定角度。</p>
+                <a href="whirligig/index.html" id="project-three">点我看看吧</a>
+            </div>
+        </div>
+        <div class="project-classify">
+            <div class="project-detail">
+                <h3>星巴克首页</h3>
+
+                <p> 用媒体查询的方法实现星巴克首页的响应式</p>
+                <a href="star/index.html" id="project-four">点我看看吧</a>
+            </div>
+            <div class="project-detail">
+                <h3>轮播图</h3>
+
+                <p>用jQuery实现轮播图轮播效果</p>
+                <a href="slideshow/index.html" id="project-five">点我看看吧</a>
+            </div>
+            <div class="project-detail">
+                <h3>放大镜</h3>
+
+                <p>
+                    由于事件冒泡，会导致drag和下面的小图片框一闪一闪的，给遮罩层mask添加事件，有一个drag，移动到哪里哪里就放大，drag划过，获取到鼠标的位置就是drag的中心位置，要判断drag不能越界，将drag在小图片的位置和大图片在大图片的框里的位置建立一定的关系。</p>
+                <a href="magnifying-lens/index.html" id="project-six">点我看看吧</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div id="small-game">-->
+    <!--<div class="wrapper">-->
+        <!--<div id="honor-title2">-->
+            <!--<h3 class="small-title">My<span class="s-title-span"> Game</span></h3>-->
+        <!--</div>-->
+
+    <!--</div>-->
+
+<!--</div>-->
+
+<div id="contact-me">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="contact-me-header">
+                    <h2 class="center-block">Contact<span>  Me</span></h2>
+                </div>
+                <div class="control-text text-center  contact-me-direction">如果喜欢我，就赶快联系我吧！</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="contact-ME">
+                <form class="form-inline text-left">
+
+                    <div class="input-group col-md-3  marginT20 marginR10">
+                        <div class="input-group-addon bgBlue"><i class="glyphicon glyphicon-phone"></i></div>
+                        <input type="text" class="form-control" placeholder="Tel"/>
+                    </div>
+
+                    <div class="input-group col-md-3  marginT20 positionL0">
+                        <div class="input-group-addon bgBlue"><i class=" glyphicon glyphicon-cog"> </i></div>
+                        <input type="text" class="form-control width100" placeholder="Choose"/>
+
+                        <div class="input-group-btn ">
+                            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+
+                                <span class="caret">&nbsp;</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header">菜单标题</li>
+                                <li><a href="#">首页</a></li>
+                                <li><a href="#">资讯</a></li>
+                                <li class="divider"><a href="#">产品</a></li>
+                                <li class="disabled"><a href="#">关于</a></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <span>&nbsp;</span>
+
+                    <div class="input-group col-md-3  marginT20 marginR10 " id="email">
+
+                        <div class="input-group-addon bgBlue height35"><i class="glyphicon glyphicon-envelope"></i>
+                        </div>
+                        <input type="text" class="form-control" placeholder="E-mail" id="Eamail"/>
+                    </div>
+
+                    <span>&nbsp;</span>
+
+                    <div class="input-group col-md-3  marginT20 marginR10" id="username">
+                        <div class="input-group-addon bgBlue"><i class="glyphicon glyphicon-user"></i></div>
+                        <input type="text" class="form-control" placeholder="Name" id="Usernamea"/>
+                    </div>
+
+                    <span>&nbsp;</span>
+
+                    <div class="input-group col-md-10   marginT20">
+                        <div class="input-group-addon bgBlue"><i class="  glyphicon glyphicon-pencil"></i></div>
+                        <textarea name="" id="" cols="30" rows="10" class="form-control"
+                                  placeholder="Description"></textarea>
+                    </div>
+                    <br/>
+
+                    <div class="col-md-12 text-right ">
+                        <a href="#" class="btn btn-default btn-primary bgBlue width100 marginT20">发送</a>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<script src="js/particles.min.js.下载"></script>
+<script src="js/app.js.下载"></script>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/me.js"></script>
+<script src="js/index.js"></script>
+<script src="../bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="js/message.js"></script>
+<script>
+    $(function () {
+        var $username = $("#username");
+        var $Username = $("#Usernamea");
+        var $email = $("#email");
+        var $Eamail = $("#Eamail");
+        var $star = $("<span class='high'>&nbsp;</span>");
+        $star.insertAfter($username);
+        var $star2 = $("<span class='high'>&nbsp;</span>");
+        $star2.insertAfter($email);
+
+
+        $Username.focus(function () {
+            var $wrong = $("<span class='onError'> 请输入至少6位的用户名 </span>");
+            var $right = $("<span class='onSuccess'> 输入正确 </span>");
+//          没keyup时，刚获取焦点就提示
+            if (this.value == "") {
+                if ($star.next().length == 0) {
+                    $wrong.insertAfter($star);
+                }
+            }
+            $(this).keyup(function () {
+                console.log(this.value);
+
+//                    往*后边增加提示框，保证有兄弟就不要重复添加提示框了
+//                    删除字符的时候，小于6的时候，this.value.length<6，保证显示错误提示框回来，每次监听input里的字符
+                if ($star.next().length == 0 || this.value.length < 6) {
+//                 console.log($star.next());
+                    console.log("<60");
+                    $star.next().remove();
+                    $wrong.insertAfter($star);
+
+                } else {
+                    $star.next().remove();
+                    $right.insertAfter($star);
+                    console.log(">6");
+                }
+            });
+        }).on("blur", function () {
+            $(this).triggerHandler("keyup")
+        });
+        $Eamail.focus(function () {
+            var $wrong1 = $("<span class='onError'> 请输入正确的邮箱号 </span>");
+            var $right1 = $("<span class='onSuccess'> 输入正确 </span>");
+            if (this.value == "") {
+                if ($star2.next().length == 0) {
+                    $wrong1.insertAfter($star2);
+                }
+            }
+            $(this).keyup(function () {
+                console.log(this.value);
+
+//                    往*后边增加提示框，保证有兄弟就不要重复添加提示框了
+//                    删除字符的时候，小于6的时候，this.value.length<6，保证显示错误提示框回来，每次监听input里的字符
+                if ($star2.next().length == 0 || !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value)) {
+//                 console.log($star.next());
+                    console.log("<60");
+                    $star2.next().remove();
+                    $wrong1.insertAfter($star2);
+
+                } else {
+                    $star2.next().remove();
+                    $right1.insertAfter($star2);
+                    console.log(">6");
+                }
+
+            })
+        }).on("blur", function () {
+            $(this).triggerHandler("keyup")
+        });
+
+        $("#send").on("click", function () {
+
+            console.log($star.next().attr("class"));
+            if ($star.next().attr("class") == "onSuccess" && $star2.next().attr("class") == "onSuccess") {
+                alert("注册成功,密码已发到你的邮箱,请查收");
+            } else {
+                alert("验证失败禁止提交");
+            }
+            $username.trigger("blur");
+            $email.trigger("blur");
+        });
+        $("#res").on("click", function () {
+            $username.empty();
+            $star.next().remove();
+            $email.empty();
+            $star2.next().remove();
+        })
+
+    })
+</script>
+</body>
+</html>

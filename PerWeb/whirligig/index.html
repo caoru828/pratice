@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            perspective: 1000px;
+            perspective-origin: 50% -400px;
+        }
+        #WHIcontainer{
+            width: 150px;
+            height: 150px;
+            position: relative;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            transition: all 1s ease;
+        }
+        #WHIcontainer img{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            transition: all 1s linear 1s;
+            box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+            border: 2px solid #f2dede;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="WHIcontainer"></div>
+    <script>
+       var  oContainer = document.getElementById("WHIcontainer");
+       var counter=0;
+       for(var i=0;i<9;i++){
+
+           var oImg = new  Image();
+           oImg.onload = function(){
+               counter++;
+               if(counter==9){
+//                   alert("图片加载成功！")
+                   Successful();
+               }
+           };
+
+           oImg.src = (i+1) +".jpg";
+           oContainer.appendChild(oImg);
+       }
+
+        function Successful(){
+            var aImg = document.getElementsByTagName("img");
+            for(var i=0;i<9;i++){
+                aImg[i].style.transitionDelay = i*100+"ms";
+                aImg[i].style.transform = "rotateY("+ (i+1)*40 +"deg) translateZ(240px)"
+            }
+        }
+       var num =0;
+        oContainer.onclick = function(){
+            num++;
+            oContainer.style.transform = "rotateY("+num*40+"deg)"
+        }
+
+    </script>
+</body>
+</html>
