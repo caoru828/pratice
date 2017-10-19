@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<ul id="ul1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<!-- Visual stdio Code-->
+
+<script>
+
+
+
+
+    var oUl = document.querySelector("#ul1");
+    var aLi = oUl.getElementsByTagName('li');
+//    var arr = [];
+//    for(let i=0; i<5; i++){
+//        aLi[i].index = i;
+//        aLi[i].onclick = function(){
+//            console.log(this.index);
+//        };
+//        arr[i] = function(){
+//            console.log(i);
+//        };
+//    }
+//    arr[3]();
+
+//    for (var i = 0; i < aLi.length; i++) {
+//     aLi[i].index = i;
+//     aLi[i].onclick = function () {
+//     console.log(this.index);
+//     };
+//     }
+    for (var i = 0; i < aLi.length; i++) {
+        (function (idx) {
+            aLi[idx].onclick = function () {
+                console.log(idx);
+            };
+//            aLi[0].onclick = function () {
+//             console.log(0);
+//             };
+//             aLi[1].onclick = function () {
+//             console.log(1);
+//             };
+//             aLi[2].onclick = function () {
+//             console.log(2);
+//             };
+        })(i);
+    }
+
+    //    var a = 5;
+
+//    a = 5;
+//    console.log(a);
+
+//    var a = 10;
+//    function fn() {
+//        console.log(a);
+//        let a = 20;
+//    }
+//
+//    fn();
+
+
+//    {
+//        let i = 0;
+//    }
+//
+//    console.log(i);
+
+
+//var a = 5;
+// function foo(){
+// console.log(a);
+////   死区，下边有let，上边不好使
+//     let a = 6;
+// }
+// foo();
+//
+//  var a = 5;
+// function foo(){
+// console.log(a);
+// //逻辑代码
+// if(false){
+// var a = 6;
+// }
+// }
+
+
+// let a = 5;
+// function foo(){
+// console.log(a);
+// //逻辑代码
+// if(false){
+// let a = 6;
+// }
+// }
+// foo();
+
+//
+// for(let i=0; i<3; i++){
+// console.log(i);
+// }
+// let i = 5;
+// console.log(i);
+
+
+// const a = 5;
+// a = 6;
+// console.log(a);
+
+// const obj = {
+// name: 'zhangsan',
+// age: 18
+// };
+// console.log(obj);
+// obj = {
+// name: 'lisi'
+// };//new Object()
+///*  Object.freeze(obj);//冻结
+// console.log(obj);
+//地址改变了，
+
+//
+// obj.name = 'lisi';
+//console.log(obj);
+//地址没改变，属性变了
+
+// const arr = [1, 2, 3, 4];
+////console.log(typeof(arr));
+// console.log(arr);
+////console.log(arr.indexOf(4))
+//console.log(arr.constructor==Array);
+// arr.push(5);
+// console.log(arr);
+
+//const 指向的那块变量的内存地址不会被改变，所以引用数据类型数push，对象属性会改变
+
+
+
+//定义一个函数等于5，变量等于5，a是个函数，函数级别比变量高
+
+
+
+
+
+</script>
+</body>
+</html>
