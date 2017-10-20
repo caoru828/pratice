@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+</head>
+<body>
+<div>11</div>
+<div>115</div>
+<div>777</div>
+<script>
+//    ...表示一堆参，拼在一起，一个表示很多个，
+
+
+//    function foo(){
+//        console.log(arguments[0],arguments[1]);
+//    }
+//    foo(5,8)
+
+//参数不固定是
+//    function foo(...arg){
+////        console.log(arguments[0],arguments[1]);
+//    console.log(arg);
+//    }
+//    foo(5,8,89,6)
+
+//   一个数组插到另一个数组里
+
+//    let arr1 = [1,2];
+//    let arr2 = [7,...arr1,9];
+//    console.log(arr2);
+
+//    数组复制
+//    let arr1 = [1,2,3,4];
+//    let arr2 = arr1;
+//    console.log(arr1);
+//    arr1.push(5);//数组，对象都指向同一块内存空间
+//    console.log(arr2); //arr2也变
+
+//  [...arr1]是给arr2自己开辟一块内存空间，所以网arr1里push的时候，arr2不变
+//    let arr1 = [1,2,3,5];
+//    let arr2 = [...arr1];
+//    console.log(arr1);
+//    arr1.push(8);
+//    console.log(arr2);
+
+//    合并数组
+//    concat 连接两个或更多数组，返回新数组
+//    let arr1 = [1,2,3];
+//    let arr2 = [8,9];
+//    let arr3 = arr1.concat(arr2);
+//    console.log(arr3);
+
+//    let arr1 = [1,2,3];
+//    let arr2 = [8,9];
+//    let arr3 = [...arr1,...arr2];
+//    console.log(arr3)
+
+//    对象
+//    ...arg代表传入的多个参数
+//    function foo(...arg){
+//        console.log(arg);
+//    }
+//    let obj = {
+//        name:"lisi",
+//        age:20
+//    };
+//    let obj2 = {
+//        name:"lisan",
+//        age:19
+//    };
+//    foo(obj,obj2);
+
+//    解构
+//    let obj = {
+//        name:"lisi",
+//        age:20
+//    };
+//    let obj2 = {
+//        name:"lisan",
+//        age:19
+//    };
+//?/?这个不好使
+//    let obj3 = {...obj, ...obj2 };
+//    console.log(obj3);
+//    后边把前边覆盖掉了，对象扩展
+//    console.log(Object.assign(obj,obj2));
+
+//    let aDiv = document.querySelectorAll("div");//nodelist
+//    console.log(aDiv.constructor);//类数组
+//  把他类数组转化成真正的数组1.
+//  let arr = [];
+//  for(let i = 0;i<aDiv.length;i++){
+//      arr.push(aDiv[i]);
+//  }
+//  arr.push(222);//数组就是push好使
+//  console.log(arr);
+//    let arr = [1,5,7];
+//    console.log(arr.constructor);//array
+
+//    2.
+//  let arr = [...aDiv];
+//  arr.push(0);
+//    console.log(arr);
+
+//    解构成一个个对象
+//    let [div1,div2,div3] = [...aDiv];
+//    console.log(div1,div2,div3);
+
+//    let obj1 = {
+//        name:"zhangsan",
+//        age:78
+//    };
+//    let {name,age} = obj1;
+//    console.log(name,age);、
+
+//rest运算符
+//后几个都给arg，arg只能放末尾，放中间不行
+//    function foo(a,b,...arg){
+//    console.log(a,b,arg);
+//    }
+//    foo(5,6,7,8,9);
+
+
+</script>
+</body>
+</html>
