@@ -2,27 +2,194 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>结构赋值</title>
 </head>
 <body>
 
 <script>
-//    let [a,b,c]=[1,2,3];
-//    console.log(a, b, c);
-    let {name,age} = {
-        name:'zhangsan',
-        age:15
-    }
+    //    let arr = [1, 2, 3];
+    //    let a= arr[0];
+    //    let b= arr[1];
+    //    let c= arr[2];
+    //    let [a,b,c] = [1, 2, 3];//对应[]
+    //    console.log(a , b ,c );//顺序对应
 
-    let json = '{"a":"hello","b":"world"}';
-    let obj = JSON.parse(json);
+    //    let [a,b,c,d] = [1,2,[3,4],5];
+    //    console.log(a , b, c, d);
 
-//    ajax 不刷新界面的请求
-//     .get()客户端传到服务端，不安全，数据小，head，可以时缓存数据   .post()服务端传到客户端，安全，数据大，body，不可以缓存数据
+    //    let [a,b,[c,d],e] = [1,2,[3,4],5];
+    //    console.log(a , b, c, d,e); // 1 2 3 4 5
+
+    //    let [a,b,[c],e] = [1,2,[3,4],5];
+    //    console.log(a , b, c, e);//1 2 3 5
+
+    //    let [a,b,[c,d],e] = [1,2,[3,4],5];
+    //    console.log(a , b, c,d, e);//1 2 3 undefined 5
+    //
+    //    let [a,b,[c,d=0],e] = [1,2,[3,4],5];// 1,2,3,4,5   如果右边的d没传取默认值取左边的0
+    //    console.log(a , b, c, d,e);
+
+    //     let fn = () => console.log("fn");
+    //     let [x = fn()] = [];
+    //     console.log(x);
+    //
+
+    //        let fn = () => {
+    //        console.log("fn");
+    //        return 'fn';
+    //        }
+    //        let [x = fn()]=[];
+    //        console.log(x);
 
 
-//    es6=>es5
-//
+    //    对象解构
+    //    let obj = {
+    //        name: "lisi",
+    //        age: 18
+    //    };
+    //    let name = obj.name;
+    //    let age = obj.age;
+    //    console.log(name, age);
+
+    //    let {age,name} = {
+    //        name:"lisi",
+    //        age:19
+    //    };
+    //
+    //    console.log(name,age);
+
+    //    let {age1,name1} = {
+    //        name:"lisi",
+    //        age:19
+    //    };
+    //
+    //    console.log(name1,age1);
+
+    //        let {age,name} = {
+    //            name:"lisi",
+    //            age:19
+    //        };
+    //
+    //        console.log(name,age);
+
+    //    let {age:a,name:b} = {//起个别名，a，b但是原来的就不好使了
+    //        name:"lisi",
+    //        age:19
+    //    };
+    //
+    //    console.log(a,b);
+
+    //        let str = 'believe';
+    //        for(let i=0;i<str.length;i++){
+    ////            console.log(str.charAt(i))
+    //            console.log(str[i]);//字符串也可以当成数组去看
+    //        }
+    //
+    //        let [a,b,c] = 'bel';
+    //        console.log(a,b,c);
+
+
+    //    应用
+    //        let foo = ([x,y,z]) =>{
+    //        console.log(x,y,z);
+    //    }
+    //        foo(['a','b','c'])
+
+    //    let add = ([a,b]) => console.log(a+b);
+    //    add([9,6]);
+
+    //    let add =([a=0,b=0]) => console.log(a+b);
+    //    add([]);
+
+    //    对象
+    //    function foo({name,age,school="xx大学"}){
+    //        console.log(name,age,school);
+    //    }
+    //      let obj ={
+    //          name:"lisi",
+    //          age:20
+    //      };
+    //     foo(obj);
+
+    //    function foo(){
+    //        let arr = ['aa','bb','cc'];
+    //        return arr;
+    //    }
+    //    let [a,b,c] = foo();
+    //    console.log(a,b,c);
+
+    //        function foo(){
+    //            let obj={
+    //                name:"liso",
+    //                age:77,
+    //                school:"黑大"
+    //            };
+    //            return obj;
+    //        }
+    //        let {name:a,school:b,age:c} = foo();
+    //        console.log(a,b,c);
+    //提高开发效率，减少代码量
+
+    //    变量值互换
+    //    1.
+    //    let a=5;
+    //    let b = 6;
+    //    let temp=a;
+    //         a=b;
+    //         b= temp;
+    //    console.log(a,b);
+
+    //2.
+    //    let a=5;
+    //        let b = 6;
+    //    a=a+b;
+    //    b=a-b;
+    //    a=a-b;
+    //    console.log(a,b);
+
+    //    3.
+    //        a=[b,b=a][0];
+    //    console.log(a,b);
+
+    //    4.
+    //    var [a,b] = [b,a];
+    //    console.log(a,b);
+
+
+    //    JSON应用：JSON是js对象的字符串表示法，他使用文本表示一个js对象的信息，本质是一个字符串
+    //    let  obj = {a:"hello",b:"world" }
+    //    let  json = '{"a":"hello","b":"world"}';
+    ////    先转化成对象
+    //    let obj = JSON.parse(json);
+    //    console.log(obj);
+    //    let {a,b} = obj;
+    //    console.log(a,b);
+
+
+
+    //     let [a,b,c,d,e,f] = json;
+    //    console.log(a,b,c,d,e,f);
+
+
+
+
+
+    //    let [a,b,c]=[1,2,3];
+    //    console.log(a, b, c);
+    //    let {name,age} = {
+    //        name:'zhangsan',
+    //        age:15
+    //    }
+    //
+    //    let json = '{"a":"hello","b":"world"}';
+    //    let obj = JSON.parse(json);
+
+    //    ajax 不刷新界面的请求
+    //     .get()客户端传到服务端，不安全，数据小，head，可以时缓存数据   .post()服务端传到客户端，安全，数据大，body，不可以缓存数据
+
+
+    //    es6=>es5
+    //
 
 
 </script>
