@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .red {
+            width: 200px;
+            height: 400px;
+            background: #000;
+        }
+
+        .font {
+            font-size: 100px;
+            color: #002a80;
+        }
+    </style>
+</head>
+
+<body>
+<div id="app">
+    <input type="text" id="ipt"/>
+    <input type="text" v-model="msg">
+    <!--<p v-bind:id="'aa'"></p>-->
+    <!--<p v-bind:id="aa"></p>-->
+    <!--绑定属性-->
+    <!-- 动态-->
+    <!--<div class="red"></div>-->
+    <!--<div :class="{red:isRed ,font:isFont}">ddddd</div>-->
+    <!--<div :class="">ddddd</div>-->
+
+    <!--<button @click="fn()">ddddd</button>-->
+    <button @click="isRed=!isRed">ddddd</button>
+    <!--<div :class="[classA]">ddddd</div>-->
+    <div :class="{red:isRed}">ddddd</div>
+</div>
+<script src="vue.js"></script>
+<script>
+    var flag = true;
+    var i = 0;
+    var vm = new Vue({
+        el: '#app',//作用域
+        data: {
+            msg: 'aaa',
+            a: 'div1',
+            isRed:true,
+//            isFont:true
+            classA: 'red',
+            classB: '',
+            flag:true
+
+        },
+        methods: {
+            fn()
+                {
+
+                    if(this.classA=='red'){
+                        this.classA="";
+                    }else{
+                        this.classA = 'red';
+                    }
+                }
+    }
+    })
+    //enter回车·8
+    //
+</script>
+</body>
+</html>

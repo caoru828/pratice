@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .red {
+            width: 200px;
+            height: 400px;
+            background: #000;
+        }
+
+        .font {
+            font-size: 100px;
+            color: #002a80;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <input type="text" id="ipt"/>
+    <input type="text" v-model="msg">
+    <!--<button @click="isRed=!isRed">ddddd</button>-->
+    <!--<div :class="{red:isRed}">ddddd</div>-->
+    <div :style="background:BGstyle">111</div>
+</div>
+<script src="vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            BGstyle:"red"
+        }
+    })
+</script>
+</body>
+</html>

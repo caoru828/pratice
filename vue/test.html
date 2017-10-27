@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+ <div id="app">
+     <input type="text" id="ipt"/>
+     <input type="text" v-model="msg">
+     <!-- 与data值绑定，相当于value，在input里输入值，data变，vm.msg也变，双向绑定-->
+     {{msg}}
+    <!--<button v-on:click = "fn">click</button>-->
+
+     <!-- 给dom元素帮事件，-->
+     <!--<button @click = "fn('zs',45)">click</button>-->
+     <!--<button @click = "fn()">click</button>-->
+     <button @click = "fn()">click</button>
+     <!--<h1></h1>-->
+     <span>当前点击次数为</span>
+     <!--<span  v-model="time"></span>-->
+     <!--{{time}}-->
+     <!--<span v-text="time"></span>-->
+     <span v-html="time"></span>
+ </div>
+ <script src="vue.js"></script>
+<script>
+    var i=0;
+    var vm = new Vue({
+        el:'#app',//作用域
+        data:{
+            msg:'aaa',
+
+            time:i
+        },
+        methods:{
+//            fn:function(name,age){
+//                console.log(event.target);
+//                alert( name  + age );
+//                console.log(name,age);
+//            }
+//            fn:function(e){
+//
+//                alert(e)
+//            }
+            fn:function(){
+//
+//                alert(ss);
+//                console.log(ss);
+//vm.time++;
+//                this.time++;
+//                i++;
+            }
+//            fn:function(){
+//
+//                alert(event.target)
+//            }
+        }
+//        vm.msg = '455',这个时刻保证和data数据一致，他改变data改变，dom改变
+    });
+
+
+//    访问器属性，ie9以上才能支持
+//    var obj = {
+//
+//    };
+//    Object.defineProperty(obj,'name',{
+//      set:function(val){
+//          console.log(val);
+//          document.getElementById("ipt").value = val;
+//      }
+//    })
+
+
+
+</script>
+</body>
+</html>
