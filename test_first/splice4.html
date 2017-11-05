@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var result = "how are you doing";
+    var arr = result.split(" ");
+    console.log(arr);
+    var max = arr[0];
+    var min = arr[0];
+    for (var i= 1;i<arr.length;i++){
+//        arr[i] 是个字符串
+//          arr[i].sizesss = arr[i].split("").length;
+//          console.log(arr[i].split("").length);
+//          console.log( arr[i].sizesss);
+        if(max.length<arr[i].length){
+            max = arr[i];
+        }
+        if(min.length>arr[i].length){
+            min = arr[i];
+        }
+//        console.log(arr[i].length);
+    }
+    console.log(max,min);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: rebeccapurple;
+            text-align: center;
+        }
+        #span1{
+            background: red;
+            line-height: 200px;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: green;
+            position: relative;
+        }
+        #son1{
+            width: 50px;
+            height: 50px;
+            background: yellow;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -25px;
+            margin-left: -25px;
+        }
+        #div3{
+            width: 200px;
+            height: 200px;
+            background: grey;
+            overflow: hidden;
+        }
+        #son2{
+            background: #000;
+            width:50px;
+            height: 50px;
+            margin-left: 75px;
+            margin-top: 75px;
+            color: white;
+        }
+        #div4{
+            width: 200px;
+            height: 200px;
+            background: pink;
+           position: relative;
+            /*transform: translate(50%,50%);*/
+        }
+        #son3{
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width: 50px;
+            height: 50px;
+            background: blue;
+
+        }
+        #div5_1{
+            width: 200px;
+            height: 200px;
+            background: pink;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+        }
+        #div5_2{
+            width: 50px;
+            height: 50px;
+            background: blue;
+        }
+        #div6_1{
+            width: 200px;
+            height: 200px;
+            background: pink;
+            display: table;
+        }
+        #div6_2{
+            width: 50px;
+            height: 50px;
+            background: blue;
+            display: table-cell;
+        }
+    </style>
+</head>
+<body>
+    <!--行级元素-->
+    <div id="div1">
+        <span id="span1">行及元素</span>
+    </div>
+    <div id="div2">
+        <div id="son1">块法1</div>
+    </div>
+    <div id="div3">
+        <div id="son2">块法2</div>
+    </div>
+    <div id="div4">
+        <div id="son3">块法3</div>
+    </div>
+    <br>
+    <div id="div5_1">
+        <div id="div5_2">块发4</div>
+    </div>
+
+</body>
+</html>
