@@ -7,27 +7,99 @@
 <body>
 
 <script>
-    var a = [0,2,3];
-//    concat返回一个新数组，原来数组不变
-//    constructor 属性返回对创建此对象的数组函数的引用。
-    document.write(a.concat(4,5));
-    console.log(a.concat(4,5));
-    console.log(a);
-    var arr = new Array(3);
-    arr[0] = "WuYiFan";
-    arr[1] = "LuHan";
-    arr[2] = "John";
-    var arr1 = new Array(3);
-    arr1[0] = "Jick";
-    arr1[1] = "Mick";
-    arr1[2] = "Marry";
-    console.log(arr.concat(arr1));
-    console.log(arr);
+    //    var a = [0,2,3];
+    ////    concat返回一个新数组，原来数组不变
+    ////    constructor 属性返回对创建此对象的数组函数的引用。
+    //    document.write(a.concat(4,5));
+    //    console.log(a.concat(4,5));
+    //    console.log(a);
+    //    var arr = new Array(3);
+    //    arr[0] = "WuYiFan";
+    //    arr[1] = "LuHan";
+    //    arr[2] = "John";
+    //    var arr1 = new Array(3);
+    //    arr1[0] = "Jick";
+    //    arr1[1] = "Mick";
+    //    arr1[2] = "Marry";
+    //    console.log(arr.concat(arr1));
+    //    console.log(arr);
+    //
+    //    var  arr3 = new Array();
+    //    if(arr3.constructor == Array){
+    //        document.write("Array");
+    //    }
+    //
+    //.join()把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。不改变原数组
+    var arr4 = new Array(3);
+    arr4[0] = "George";
+    arr4[1] = "John";
+    arr4[2] = "Thomas";
+    console.log(arr4.join("  "));
+    console.log(arr4);
 
-    var  arr3 = new Array();
-    if(arr3.constructor == Array){
-        document.write("Array");
-    }
+    //.reverse()倒叙输出,改变了原数组
+    //var arr = new Array(3)
+    //arr[0] = "George"
+    //arr[1] = "John"
+    //arr[2] = "Thomas"
+    //
+    //document.write(arr + "<br />")
+    //document.write(arr.reverse())
+    //document.write(arr + "<br />")
+
+    //    var arr = new Array(3);
+    //    arr[0] = "George";
+    //    arr[1] = "John";
+    //    arr[2] = "Thomas";
+    //    数组pop最后一个删除
+    //pop() 方法将删除 arrayObject 的最后一个元素，把数组长度减 1，并且返回它删除的元素的值。如果数组已经为空，则 pop() 不改变数组，并返回 undefined 值。
+    //    document.write(arr);
+    //
+    //    document.write("<br />");
+    //
+    //    document.write(arr.pop());
+    //
+    //    document.write("<br />");
+    //
+    //    document.write(arr);
+
+    //    删除下标有2开始的，三个元素，并把William添加进去
+    //    var arr = new Array(6);
+    //    arr[0] = "George";
+    //    arr[1] = "John";
+    //    arr[2] = "Thomas";
+    //    arr[3] = "James";
+    //    arr[4] = "Adrew";
+    //    arr[5] = "Martin";
+    //    document.write(arr + "<br />");
+    //    arr.splice(2,3,"William");
+    //    arr.splice(2,2);
+    //    document.write(arr + "<br />");
+
+    //var arr = new Array();
+    //arr[0] = "George";
+    //arr[1] = "John";
+    //arr[2] = "Thomas";
+    //arr[3] = "James";
+    //arr[4] = "Adrew";
+    //arr[5] = "Martin";
+    //
+    //document.write(arr + "<br />");
+    ////从下标一开始街道最后
+    //document.write(arr.slice(1) + "<br />");
+    ////从下标2开始街道4
+    //document.write(arr.slice(2,4) + "<br />");
+    //document.write(arr);
+
+    //shift() 方法用于把数组的第一个元素从其中删除，并返回第一个元素的值。
+    //var arr = new Array(3);
+    //arr[0] = "George";
+    //arr[1] = "John";
+    //arr[2] = "Thomas";
+    //
+    //document.write(arr + "<br />");
+    //document.write(arr.shift() + "<br />");
+    //document.write(arr);
 
 </script>
 </body>
