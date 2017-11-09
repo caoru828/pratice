@@ -1,0 +1,23 @@
+body, div {
+  color: #ff0084; }
+  body ul, div ul {
+    background-color: #fff; }
+div {
+  font-size: 19px; }
+
+.col-4 {
+  width: 80px; }
+
+.col-3 {
+  width: 60px; }
+
+.col-2 {
+  width: 40px; }
+
+.col-1 {
+  width: 20px; }
+
+.div1 {
+  width: 70px; }
+
+/*# sourceMappingURL=index.css.map */

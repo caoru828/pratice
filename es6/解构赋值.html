@@ -84,97 +84,99 @@
     ////            console.log(str.charAt(i))
     //            console.log(str[i]);//字符串也可以当成数组去看
     //        }
-    //
-    //        let [a,b,c] = 'bel';
-    //        console.log(a,b,c);
+//
+//        let [a,b,c] = 'bel';
+//        console.log(a,b,c);
 
 
-    //    应用
-    //        let foo = ([x,y,z]) =>{
-    //        console.log(x,y,z);
-    //    }
-    //        foo(['a','b','c'])
+//    应用
+//        let foo = ([x,y,z]) =>{
+//        console.log(x,y,z);
+//    }
+//        foo(['a','b','c'])
 
-    //    let add = ([a,b]) => console.log(a+b);
-    //    add([9,6]);
+//    let add = ([a,b]) => console.log(a+b);
+//    add([9,6]);
 
-    //    let add =([a=0,b=0]) => console.log(a+b);
-    //    add([]);
+//    let add =([a=0,b=0]) => console.log(a+b);
+//    add([]);
 
-    //    对象
-    //    function foo({name,age,school="xx大学"}){
-    //        console.log(name,age,school);
-    //    }
-    //      let obj ={
-    //          name:"lisi",
-    //          age:20
-    //      };
-    //     foo(obj);
+//    对象
+//    function foo({name,age,school="xx大学"}){
+//        console.log(name,age,school);
+//    }
+//      let obj ={
+//          name:"lisi",
+//          age:20
+//      };
+//     foo(obj);
 
-    //    function foo(){
-    //        let arr = ['aa','bb','cc'];
-    //        return arr;
-    //    }
-    //    let [a,b,c] = foo();
-    //    console.log(a,b,c);
+//    function foo(){
+//        let arr = ['aa','bb','cc'];
+//        return arr;
+//    }
+//    let [a,b,c] = foo();
+//    console.log(a,b,c);
 
-    //        function foo(){
-    //            let obj={
-    //                name:"liso",
-    //                age:77,
-    //                school:"黑大"
-    //            };
-    //            return obj;
-    //        }
-    //        let {name:a,school:b,age:c} = foo();
-    //        console.log(a,b,c);
-    //提高开发效率，减少代码量
+//        function foo(){
+//            let obj={
+//                name:"liso",
+//                age:77,
+//                school:"黑大"
+//            };
+//            return obj;
+//        }
+//        let {name:a,school:b,age:c} = foo();
+//        console.log(a,b,c);
+//提高开发效率，减少代码量
 
-    //    变量值互换
-    //    1.
-    //    let a=5;
-    //    let b = 6;
-    //    let temp=a;
-    //         a=b;
-    //         b= temp;
-    //    console.log(a,b);
+//    变量值互换
+//    1.
+//    let a=5;
+//    let b = 6;
+//    let temp=a;
+//         a=b;
+//         b= temp;
+//    console.log(a,b);
 
-    //2.
-    //    let a=5;
-    //        let b = 6;
-    //    a=a+b;
-    //    b=a-b;
-    //    a=a-b;
-    //    console.log(a,b);
+//2.
+//    let a=5;
+//        let b = 6;
+//    a=a+b;
+//    b=a-b;
+//    a=a-b;
+//    console.log(a,b);
 
-    //    3.
-    //        a=[b,b=a][0];
-    //    console.log(a,b);
+//    3.
+//        a=[b,b=a][0];
+//    console.log(a,b);
 
-    //    4.
-    //    var [a,b] = [b,a];
-    //    console.log(a,b);
-
-
-    //    JSON应用：JSON是js对象的字符串表示法，他使用文本表示一个js对象的信息，本质是一个字符串
-    //    let  obj = {a:"hello",b:"world" }
-    //    let  json = '{"a":"hello","b":"world"}';
-    ////    先转化成对象
-    //    let obj = JSON.parse(json);
-    //    console.log(obj);
-    //    let {a,b} = obj;
-    //    console.log(a,b);
+//    4.
+//    var [a,b] = [b,a];
+//    console.log(a,b);
 
 
+//    JSON应用：JSON是js对象的字符串表示法，他使用文本表示一个js对象的信息，本质是一个字符串
+//    let  obj = {a:"hello",b:"world" }
+//    let  json = '{"a":"hello","b":"world"}';
+////    先转化成对象
+//    let obj = JSON.parse(json);
+//    console.log(obj);
+//    let {a,b} = obj;
+//    console.log(a,b);
 
-    //     let [a,b,c,d,e,f] = json;
-    //    console.log(a,b,c,d,e,f);
+
+
+//     let [a,b,c,d,e,f] = json;
+//    console.log(a,b,c,d,e,f);
 
 
 
 
 
     //    let [a,b,c]=[1,2,3];
+    //    console.log(a, b, c);
+    //    let [a,b,c=3]=[1,2,undefined];//接受的值是undefined的时候默认值生效
     //    console.log(a, b, c);
     //    let {name,age} = {
     //        name:'zhangsan',

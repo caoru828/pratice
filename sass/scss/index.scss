@@ -1,0 +1,121 @@
+//$aa:#00A6FE;
+//$bb:#000;
+//$test:'.test';
+//$font:'font';
+//body{
+//  background: #000;
+//  #{$font+ -size}: 14px;
+//  #{$font+-family}:'Roro';
+//}
+//li{
+//  color: black;
+//}
+//a{
+//  outline: none;
+//}
+//
+//a{
+//  background: #000;
+//}
+//div{
+//  height: 200px;
+//}
+//h1{
+//  font-style: italic;
+//  background: $aa;
+//}
+//ul{
+//  font-size: 14px;
+//  li{
+//    background-color:$aa;
+//    a{
+//      border: 3px solid #fff{
+//        left: $bb;
+//        right: 2px solid $aa;
+//      }
+//      &:hover{
+//        border: 3px solid #fff;
+//      }
+//    }
+//  }
+//}
+//
+//#{$test +1}{
+//  color: #003366;
+//}
+
+
+//@mixin test(){
+//  color:#fff;
+//  font-size:14px;
+//}
+//
+//body{
+//  @include test();
+//}
+
+//@mixin test($c,$f){
+//  color:$c;
+//  font-size:$f;
+//}
+//
+//body{
+//  @include test(#fff,18px);
+//}
+//ul{
+//  @include test($f:10px,$c:#555555);
+//}
+
+//jicheng
+
+// yinru base we jian bujia_
+//@import "base";
+body{
+  color: #ff0084;
+  ul{
+    background-color: #fff;
+  }
+}
+$flag:true;
+div{
+  @extend body;
+  @if($flag){
+    font-size: 19px;
+  }@else{
+  font-size: 88px;
+}
+  //font-size: 15px;
+}
+//@for $i from 1 through 4{
+//  .col-#{$i}{
+//    width: 20px*$i;
+//  }
+//}
+//
+//@for $i from 1 to 4{
+//  .col-#{$i}{
+//    width: 20px*$i;
+//  }
+//}
+
+//$list:sucess,fail,warn;
+//@each $var in $list{
+//  .alert-#{$var}{
+//    width: 30px;
+//  }
+//}
+
+$i:4;
+@while $i > 0{
+  .col-#{$i}{
+    width: 20px*$i;
+  }
+  $i : $i - 1;
+}
+
+@function  add($a,$b){
+  @return  $a+$b;
+}
+.div1{
+  width: add(60px,10px);
+}

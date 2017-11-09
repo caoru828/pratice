@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+   <div id="div1">
+
+   </div>
+   <script>
+       var oPp = document.getElementById("pp");
+       var oDiv1 = document.getElementById("div1");
+       function  next(elem){
+           do{
+               elem =elem &&  elem.nextSibling;
+           }while(elem && elem.nodeType!=1);
+           return elem;
+       }
+       function  prev(elem){
+           do{
+               elem = elem&& elem.previousSibling;
+           }while(elem && elem.nodeType!=1);
+           return elem;
+       }
+       function first(elem){
+               elem = elem.firstChild;
+               return elem && elem.nodeType==1? elem : next(elem);
+       }
+       next(oPp);
+       console.log(first(oDiv1));
+   </script>
+</body>
+</html>
