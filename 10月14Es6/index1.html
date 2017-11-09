@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<!--es6  ecma javascript-->
+<!--let    1.定义变量(没有变量提升)    var变量提升-->
+<!--       2.用let定一变量,不能再次定义,不能重复声明-->
+<!--       3.临时失效区（暂时死去），用let声明的变量，在作用域里不允许其他同名变量使用-->
+<!--       4.块级作用域（let const有效）-->
+<!--  闭包  外部函数里边有个内部函数，内部函数调用了外部函数的局部变量，
+            外部函数执行完之后，局部变量不被释放，内部函数可以一直使用-->
+<!--解决数组越界，onlick索引，解决办法1.this属性2.闭包-->
+    <!--const 定义常量-->
+  <!--var NUM = 10;-->
+<!--不能变量提升，let的属性他都有-->
+<script>
+//    console.log(a)
+//    //undefined;
+//    var a;
+////    var提升到最上边
+//    fn();
+//    var fn = function(){
+//
+//    };
+//
+//    var a=4;
+//    function fn(){
+//        console.log(a);
+//        var a=5;
+////    }
+//for(var i = 0;i<3;i++){
+//    console.log(i)
+//}
+//    console.log(i);
+//
+//for(let i = 0;i<3;i++){
+//    console.log(i)
+//}
+//console.log(i);
+//
+//<!--       4.块级作用域（let const有效）-->
+//
+//{
+////    var i=0;
+//    let i=0;
+//}
+//    console.log(i);
+
+//    const 定义常量
+//    var NUM = 10;
+//用const声明常量  不允许该 不能变量提升，let的属性他都有
+    const NUM=10;
+    const OBJ ={a:1,b:2};
+    OBJ.a=3;  //这里OBJ是地址，这样可以改变a的值
+    console.log(OBJ);
+
+//    Object.freeze(OBJ);  这个冻结了OBJ
+
+
+    class User{
+        constructor(){
+            this.aa = "zs";
+        }
+        say(){
+            console.log("ss");
+        }
+    }
+    class User{
+        constructor(){
+            this.aa = "zs";
+        }
+        static  say(){
+            console.log("ss");
+        }
+    }
+//static不用具体的实质化对象，User.say(),可以直接调用
+
+    var u = new User("zs");
+u.say();
+
+//    继承
+
+    class Son extends User{
+        constructor(){
+            super();
+//    代表调用父元素的构造方法
+            this.bb="bb"
+        }
+    }
+
+//js去重
+    function(){
+
+    }
+
+</script>
+
+</body>
+</html>
