@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="app">
+    <form action="">
+        <input type="text"/>
+        <input type=password"/>
+        <input type="radio" v-model="sex" value="l"/>男
+        <input type="radio" v-model="sex" value="m"/>女
+        <input type="text"/>
+    </form>
+</div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:"",
+            sex:'l',
+            school:'m'
+        }
+    })
+</script>
+</body>
+</html>

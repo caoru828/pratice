@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <div v-if="Login">登陆啊！</div>
+        <div v-else>不登陆啊！</div>
+
+        <div v-if="type =='A' ">A</div>
+        <div v-else-if="type == 'B'">B</div>
+        <div v-else="">c</div>
+
+        <!-- v-show  的值是false，就是把display : none  dom结构里还有-->
+        <!-- v-if 在dom结构里没有-->
+
+        <!-- 什么时候用v-if v-show -->
+        <!-- v-if 适合一次性操作，而v-show适合一会儿显示一会儿不显示的操作-->
+        <div v-show="IsShow">show</div>
+    </div>
+
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+//        el里的 "选择器"
+        el : "#app",
+        data : {
+//            Login : true
+            Login : false,
+//            v-if 是dom结构里都没有
+            type : '44',
+            IsShow : false
+        }
+    })
+</script>
+</body>
+</html>

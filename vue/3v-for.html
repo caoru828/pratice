@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div id="app">
+        <ul>
+            <li v-for="(value,index) in list">
+                {{value}} -- {{index}}
+            </li>
+        </ul>
+        <ul>
+            <li v-for="item in sortArr">{{item}}</li>
+        </ul>
+        <ul>
+            <!--<li v-for="val in obj">-->
+                <!--{{val}}-->
+            <!--</li>-->
+            <!--<li v-for="(val,key) in obj">-->
+                 <!--{{key}} : {{val}}-->
+            <!--</li>-->
+            <!--顺序对应，名字无所谓-->
+            <li v-for="(val,key,index) in obj">
+                 {{key}} : {{val}}---{{index}}
+            </li>
+        </ul>
+        <ul>
+            <li v-for="value in OBJ">
+                {{value}}
+            </li>
+        </ul>
+        <ul>
+            <li v-for="value in OBJ">
+
+                <br>
+
+                {{value.name}} -- {{value.age}} -- {{value.school}}
+            </li>
+        </ul>
+    </div>
+<script src="vue.js"></script>
+<script>
+    var  vm = new Vue({
+        el :　"#app",
+        data :　{
+            list : [' 黑的大','里的宫','浓的大'],
+            arr  : [1,2,8,4,5,9,0],
+            obj  : {
+                name :　'lisisi',
+                age  :  18,
+                school : '黑大'
+            },
+            OBJ  : [
+                {
+                    name :　'permit',
+                    age  :  18,
+                    school : '黑大'
+                },{
+                    name :　'commit',
+                    age  :  19,
+                    school : 'BIT'
+                },{
+                    name :　'committee',
+                    age  :  28,
+                    school : 'MIT'
+                }
+            ]
+        },
+//        计算属性
+        computed : {
+//            sortArr : function (a, b) {
+//                return a-b;
+//            }
+            sortArr : function () {
+                return this.arr.sort(function (a, b) {
+                    return a-b;
+                })
+            }
+        }
+    })
+
+</script>
+
+</body>
+</html>
