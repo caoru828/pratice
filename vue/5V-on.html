@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 300px;
+            height: 300px;
+            background: red;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: green;
+        }
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <!--<button v-on:click="add">加1</button>-->
+    <!--<button @click="add">+1</button>-->
+    <!--<button @click="add(2)">+1</button>-->
+    <!--注意必须加$-->
+    <button @click="add(2,$event)">+1</button>
+    <!--<input type="text" @keyup.13="handler">-->
+    <input type="text" @keyup.enter="handler" v-model="keyword">
+    <div>{{count}}</div>
+<!--对象语法 2.40+ -->
+    <button v-on="{mousedown:doThis,mouseup:doThat}">bbtn</button>
+
+
+    <!--事件冒泡-->
+    <div id="div1" @click="Cdiv1">
+        <!--阻止事件冒泡2-->
+        <div id="div2" @click.stop="Cdiv2"></div>
+     <!--阻止事件冒泡1-->
+        <!--<div id="div2" @click="Cdiv2($event)"></div>-->
+    </div>
+    <a href="http://www.baidu.com"  @click.prevent="baiduhandler($event)">baidu</a>
+
+</div>
+
+
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el   : '#app',
+        data : {
+            count:0,
+            keyword : 0
+        },
+        methods : {
+            add : function (num,e) {
+                this.count++;
+                console.log(e);
+//                document.write(num);
+            },
+//            handler :function () {
+//                console.log(123);
+//            }
+            handler() {
+                console.log(123    );
+                this.count += parseInt(this.keyword);
+            },
+            doThis(){
+                console.log("doThis");
+            },
+            doThat(){
+                console.log("doThat");
+            },
+            Cdiv1(){
+                console.log("clickDiv1");
+
+            },
+            Cdiv2(){
+                console.log("clickDiv2");
+            },
+//            阻止事件冒泡10
+//            Cdiv2(e){
+//                console.log("clickDiv2");
+//                e.stopPropagation();
+//            }
+
+//            箭头函数的this指向window、
+//            add : ()=> {
+//                this.count++;
+//            }
+//            add(){
+//                this.count++;
+//            }
+//            阻止浏览器的默认行为
+            baiduhandler(e){
+//                e.preventDefault();
+            }
+
+        }
+    })
+
+</script>
+</body>
+</html>
