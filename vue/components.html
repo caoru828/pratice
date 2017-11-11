@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <div id="app">
+     <!--标签大小写不区分,-->
+    <!--<demo1 v-bind:msg2="aaa" :my-Msg="bb"></demo1> -->
+     <demo1>
+         <h1>h111cc</h1>
+     </demo1>
+    <demo1 msg2="bbb"></demo1>
+ </div>
+ <!--<div id="app2">-->
+     <!--<demo></demo>-->
+ <!--</div>-->
+
+ <script type="text/x-template" id="temp">
+        <div>
+            <slot>
+                <h1>默认值</h1>
+            </slot>
+             非默认
+        </div>
+</script>
+ <script src="vue.js"></script>
+ <script>
+     //全局
+//     Vue.component('demo',{
+//        template : '<div><h1>h111</h1><p>pppp</p></div>'
+//     });
+     new Vue({
+         el:"#app",
+         data  :{
+             aaa:'dataoutaa',
+             bb :'dataoutbb'
+         },
+//         components:{
+//             demo1:{
+////                 template : '<div><h1>h111</h1><p>pppp</p></div>'
+////                 template : '<h1>h111</h1>',
+//                 template : '<h1> {{msg2}} {{myMsg}}</h1>',
+//                 props:['myMsg','msg2']
+//             }
+//
+//         }
+         components:{
+             demo1:{
+                 template : '#temp',
+                 props:['myMsg','msg2']
+             }
+
+         }
+     });
+//     new Vue({
+//         el:'#app2'
+//     })
+
+ </script>
+</body>
+</html>
