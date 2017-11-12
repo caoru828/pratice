@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+   <div id="app">
+       <form action="">
+           <label> 用户名： <input type="text" v-model="username" placeholder="请输入用户名"> </label>
+           <br>
+           <!--lazy input失去焦点时才出现，懒加载-->
+           <label> 用户名.lazy： <input type="text" v-model.lazy="username" placeholder="请输入用户名"> </label>
+           <br>
+           <!--数字，1.数大了会用科学计数法表示，2.取到非数字之前的数字，3.要是开始就是非数字那么都取-->
+           <label> 用户名.number： <input type="text" v-model.number="username" placeholder="请输入用户名"> </label>
+           <br>
+           <!--去掉首尾空格-->
+           <label> 用户名.trim： <input type="text" v-model.trim="username" placeholder="请输入用户名"> </label>
+           {{username}}
+
+           <br>
+           <!--单选框-->
+           <input type="radio" v-model="sex" value="男"> 男
+           <input type="radio" v-model="sex" value="女"> 女
+            {{sex}}
+
+           <br>
+           <!--多选框-->
+           <input type="checkbox" v-model="school" value="黑大"> 黑大
+           <input type="checkbox" v-model="school" value="林大"> 林大
+           <input type="checkbox" v-model="school" value="农大"> 农大
+           <input type="checkbox" v-model="school" value="工程"> 工程
+
+           {{school}}
+
+           <br>
+
+           <!--选择-->
+           <select name="" id="" v-model="University">
+               <option value="大一">大一</option>
+               <option value="大二">大二</option>
+               <option value="大三">大三</option>
+               <option value="大四">大四</option>
+           </select>
+           {{University}}
+
+           <br>
+           <!--textarea-->
+           <textarea name="" id="" cols="30" rows="10" v-model="description"></textarea>
+           {{description}}
+       </form>
+
+
+   </div>
+
+   <script src="vue.js"></script>
+   <script>
+       var vm = new Vue({
+           el:'#app',
+           data: {
+               username:"",
+               sex : '',
+               school:[],
+               University : '',
+               description:''
+           }
+       })
+
+
+   </script>
+</body>
+</html>
