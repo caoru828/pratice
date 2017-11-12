@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div class="list-group">
+        <a class="list-group-item" v-link="{ path: '/home'}">Home</a>
+        <a class="list-group-item" v-link="{ path: '/about'}">About</a>
+    </div>
+    <router-view></router-view>
+
+    <template id="newDetail">
+        <div>
+            News Detail - {{$route.params.dddd}},{{$route.params.aaa}}
+        </div>
+    </template>
+
+    <template id="home">
+        <div>
+
+        </div>
+
+    </template>
+
+</div>
+
+<script src="vue.js"></script>
+<script src="vue-router.min.js"></script>
+<script>
+
+
+</script>
+</body>
+</html>
