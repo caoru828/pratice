@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .aa {
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+        }
+        .bb{
+            background: #00ff00;
+        }
+        </style>
+</head>
+<body>
+    <div id="app">
+        <img :src="IMGsrc" alt="IMGalt">
+        <div :class="ClasName"></div>
+        <!--切换属性显示与否合适-->
+        <div :class="{aa:ClassA,bb:classBB}">fff</div>
+
+        <div :class="{aa:ClassA}">only_one</div>
+        <div :class="objClass"></div>
+        <!--[]直接属性的ming儿-->
+        <div :class="[ClaAA,ClaBB]"></div>
+
+        <!--直接写动态样式-->
+        <div :style="{background:BGstyle}">BGSTYLE</div>
+        <div :style="styleObj">styleObj</div>
+        <div :style="[styleA,styleB]"></div>
+
+    </div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el : "#app",
+        data : {
+            IMGsrc : 'https://cn.vuejs.org/images/logo.png',
+            IMGalt : "图片加载失败！",
+            ClasName:'aa',
+            ClassA : true,
+            classBB : true,
+            objClass : {
+                aa:true,
+                bb:true
+            },
+            ClaAA:'aa',
+            ClaBB:'bb',
+
+            BGstyle:'red',
+            styleObj:{
+                background:"red",
+                width:"200px",
+                height : '400px',
+                color:"green"
+            },
+            styleA:{
+                background : '#ff0',
+            },
+            styleB:{
+                height:'800px'
+            }
+        }
+    })
+
+
+</script>
+</body>
+</html>
