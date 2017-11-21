@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{msg}}
+    <div v-pre>{{msg}}</div>
+    <div v-cloak>{{msg}}</div>
+
+    <button @click="add()">btn</button>
+    <div>{{count}}</div>
+</div>
+
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+          msg:'Hello World!',
+          count:0
+        },
+        methods:{
+            add(){
+                this.count++;
+            }
+
+        }
+    })
+</script>
+
+</body>
+</html>
