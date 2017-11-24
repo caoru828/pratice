@@ -35,14 +35,28 @@
         #app .red{
             background:red;
         }
+        .del{
+            padding: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 <div id="app">
     <h1>todolist</h1>
     <hr>
+    <label> name:  <input type="text" v-model="name" placeholder="请输入名字"> </label>
+    <br>
+    <label>price: <input type="text" v-model="price" placeholder="请输入价格"></label>
+    <button @click="add">add</button>
+    <label>
+        search: <input type="text" v-model="keyword"> <button @click="search()">search</button>
+    </label>
+
     <ul id="list">
         <li v-for="(product,index) in productList" @click="change(product)" :class="{red:product.isRed}">
+            <input type="checkbox" @click.stop="" v-model="checked" :value="index">
+            <span @click="del(index)" class="del">&times;</span>
             <span class="product-left">{{product.name}}</span>
             <span class="product-right">{{product.price}}</span>
         </li>
@@ -54,6 +68,7 @@
         <!--total {{this.sum()}}-->
         total {{sum()}}
     </div>
+    <button @click="delAll()">删除选中</button>
 </div>
 <script src="vue.js"></script>
 <script>
@@ -61,6 +76,10 @@
         el:"#app",
         data:{
             total:0,
+            name:'',
+            price:'',
+            checked:[],
+            keyword:'',
             productList: [
                 {
                     name: '衣服',
@@ -93,7 +112,6 @@
 //                }else{
 //                    this.total = this.total - parseInt(product.price);
 //                }
-                this.sum()
             },
             sum(){
                 let total=0;
@@ -103,6 +121,38 @@
                     }
                 });
                 return total;
+            },
+            add(){
+                this.productList.push({
+                    name:this.name,
+                    price:this.price,
+                    isRed:false
+                });
+                this.name = '';
+                this.price = 0;
+            },
+            del(index){
+                this.productList.splice(index,1);
+            },
+            delAll(){
+//                console.log(this.checked);
+//                这个filter如果不用箭头函数的话，this就没有了，指向了window了,所以得用箭头函数
+                var arr =  this.productList.filter((val,index)=> {
+                    if(!this.checked.includes(index)){
+                    return val;
+                }
+            });
+                this.productList = arr;
+                //?
+                this.checked = [];
+            },
+            search(){
+                var arr = this.productList.filter((val,index)=>{
+                    if(val.name.includes(this.keyword)){
+                    return val;
+                }
+            });
+                this.productList = arr;
             }
         }
     })
