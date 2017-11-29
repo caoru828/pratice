@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#div1{
+			width: 500px;
+			height: 200px;
+			background: #ccc;
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-box;
+			display: -o-box;
+			display: box;
+			-webkit-box-pack:center;
+			-webkit-box-align:center;
+		}
+		#div1 .a{
+			background: #f00;
+			width: 100px;
+			height: 50px;
+			/*-webkit-box-flex: 1;*/
+		}
+		#div1 .b{
+			background: #0f0;
+			/*-webkit-box-flex: 1;*/
+		}
+		#div1 .c{
+			background: #00f;
+			/*-webkit-box-flex: 1;*/
+		}
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<div class="a">a</div>
+		<!-- <div class="b">b</div>
+		<div class="c">c</div> -->
+	</div>
+</body>
+</html>

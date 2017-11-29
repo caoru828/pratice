@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#div1{
+			width: 500px;
+			background: #ccc;
+		}
+		#div1 .a{
+			width: 200px;
+			height: 100px;
+			background: #f00;
+			float: left;
+		}
+		.clearfix:after{
+			content: "";
+			display: block;
+			clear: both;
+			*zoom: 1;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1" class="clearfix">
+		<div class="a">a</div>
+		<!-- <div style="clear: both;"></div> -->
+	</div>
+</body>
+</html>
