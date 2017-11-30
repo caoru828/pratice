@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--           宽度是设置宽度          用户是否可以放大缩小     初始化多少倍      最大放大多少     最小放大多少-->
     <title></title>
+
+    <!-- 1.文件  media="print" 打印时候引入样式-->
+    <link rel="stylesheet" href="" media="print" >
+    <!--最小宽度是500的时候引入-->
+    <link rel="stylesheet" href="" media="print" media="(min-width:500px)">
     <style>
+        /*<!--em相对于父元素fontsize多少倍倍   rem 相对于HTML-->*/
+        /*media query媒体查询*/
+        /*breakpoint ：1200主流pc端设备 992早期大的电脑 768ipad   480  420早期手机端*/
+
         *{
             margin: 0;
             padding: 0;
@@ -54,6 +64,7 @@
             width: 300px;
             height: 300px;
         }
+       /*2. 代码段   最大宽度是959*/
         @media (max-width: 959px) {
              header h3,nav h3,footer h3,article, figure{
                 width: 100%;
@@ -69,11 +80,20 @@
                 width: 100%;
             }
         }
+/* 3 . 横屏 landscape   portrait竖屏  */
+        @media(orientation: landscape){
+            #div1{
+                background:#fff;
+            }
+        }
         @media (max-width:479px) {
             article   .left, article  .right{
                 width: 100%;
             }
         }
+        /* 4. 设备分辨率比例*/
+        @media(-webkit-device-pixel-ratio: 2) or (-moz-device-pixel-ratio: 3)
+    /*  5. 设备宽度 （device-width）设备分辨率*/
     </style>
 </head>
 <body>
